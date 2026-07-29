@@ -1,0 +1,606 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #a3e0ff, #66ccff, #47b3e5);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    opacity: 0.95;
+    font-size: 16px;
+}
+
+.qq-number {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.add-bot-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.add-bot-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+.admin-info {
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.admin-info a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.admin-info a:hover {
+    border-bottom-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* ===== TOC ===== */
+.toc-container {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.toc-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #764ba2;
+    margin-bottom: 10px;
+}
+
+.toc-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.toc-link {
+    background: white;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.toc-link:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f093fb;
+    font-size: 22px;
+}
+
+h3 {
+    color: #333;
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
+
+/* ===== Highlight ===== */
+.highlight {
+    background: linear-gradient(120deg, #f5576c 0%, #f5576c 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 80%;
+}
+
+/* ===== Bot Tags ===== */
+/* Bot 标签 - 每个一行 */
+.bot-tag-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+    padding: 10px 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #764ba2;
+    transition: background 0.2s;
+}
+.bot-tag-item:hover {
+    background: #ede7f6;
+}
+
+.bot-tag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.bot-tag-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+}
+
+.bot-tag-qq {
+    color: #666;
+    font-size: 13px;
+    font-family: Consolas, monospace;
+}
+
+
+
+.bot-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.bot-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* ===== Feature List ===== */
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #f5576c;
+}
+
+.feature-list li code {
+    background: #e9ecef;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    color: #e83e8c;
+}
+
+/* ===== Warning Box ===== */
+.warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 1px solid #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.warning strong {
+    color: #856404;
+}
+
+.warning ul, .warning ol {
+    padding-left: 28px;
+    margin-top: 8px;
+}
+
+.warning li {
+    margin: 6px 0;
+}
+
+/* ===== Q&A ===== */
+.qa-item {
+    background: #f8f9fa;
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.qa-q {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.qa-q:hover {
+    opacity: 0.9;
+}
+
+.qa-a {
+    padding: 20px;
+    color: #555;
+}
+
+.qa-a ul,
+.qa-a ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.qa-a li {
+    margin: 6px 0;
+}
+
+/* ===== Collapsible (for gallery) ===== */
+.collapsible-section {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 20px 0;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+.collapsible-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    transition: background 0.3s;
+}
+
+.collapsible-header:hover {
+    background: #e8e8e8;
+}
+
+.collapsible-header h3 {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.toggle-icon {
+    font-size: 12px;
+    color: #999;
+    transition: transform 0.3s;
+}
+
+.collapsible-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.collapsible-content.expanded {
+    padding: 15px;
+    max-height: 2000px;
+}
+
+/* ===== Chat Bubbles ===== */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+}
+
+.msg {
+    display: flex;
+    align-items: flex-start;
+}
+
+.msg.user {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-break: break-word;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user .bubble {
+    background: #fff;
+    color: #333;
+    border-top-left-radius: 4px;
+}
+
+.bot .bubble {
+    background: #0084ff;
+    color: white;
+    border-top-right-radius: 4px;
+}
+
+img.sticker {
+    max-width: 180px;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ===== Rules List ===== */
+.rules-list {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.rules-list li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* ===== H3 折叠区块 ===== */
+.h3-collapsible {
+    margin: 12px 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.h3-toggle {
+    background: #f0f0f0;
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+    transition: background 0.2s;
+    margin: 0;
+}
+.h3-toggle:hover {
+    background: #e4e4e4;
+}
+.h3-toggle::after {
+    content: "▶";
+    font-size: 12px;
+    color: #999;
+}
+
+.h3-collapsible.expanded .h3-toggle::after {
+    content: "▼";
+}
+
+/* 内容容器：直接用 display 控制 */
+.h3-content {
+    display: none;
+    padding: 0 18px 18px;
+}
+
+.h3-collapsible.expanded .h3-content {
+    display: block;
+}
+
+.h3-content .rules-list {
+    margin-top: 8px;
+}
+.h3-content > p:first-child {
+    margin-top: 12px;
+}
+
+/* ===== 开发团队网格 ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.team-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 开发团队头像 ===== */
+.team-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.team-avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover .team-avatar img {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.team-role {
+    font-size: 13px;
+    color: #764ba2;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    background: rgba(118, 75, 162, 0.08);
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.team-contact {
+    font-size: 13px;
+    color: #888;
+    font-family: Consolas, monospace;
+}
+
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .team-card {
+        padding: 20px 10px;
+    }
+
+    .team-avatar {
+        font-size: 34px;
+    }
+
+    .team-name {
+        font-size: 16px;
+    }
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .toc-links {
+        justify-content: center;
+    }
+
+    .toc-link {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .bot-group {
+        justify-content: center;
+    }
+    
+    .team-avatar img {
+        width: 54px;
+        height: 54px;
+    }
+}

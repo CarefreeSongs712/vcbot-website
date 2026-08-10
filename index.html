@@ -26,9 +26,11 @@
         <div class="toc-container">
             <div class="toc-title">📑 快速导航</div>
             <div class="toc-links">
-                <a href="#group-intro" class="toc-link">进群必读</a>
+                <a href="#changelog" class="toc-link">更新日志</a>
+                <a href="#features" class="toc-link">功能一览</a>
                 <a href="#usage" class="toc-link">使用方式</a>
                 <a href="#qa" class="toc-link">常见Q&A</a>
+                <a href="#rules" class="toc-link">群规与规范</a>
                 <a href="#notice" class="toc-link">其它事项</a>
                 <a href="#disclaimer" class="toc-link">免责声明</a>
                 <a href="#team" class="toc-link">开发团队</a>
@@ -37,16 +39,68 @@
 
         </div>
 
-        <!-- ===== 进群必读 ===== -->
-        <section id="group-intro">
-            <h2>📋 进群必读</h2>
+        <!-- ===== 更新日志 ===== -->
+        <section id="changelog">
+            <h2>📣 更新日志</h2>
+            <div class="changelog-item">
+                <span class="changelog-date">2026.8.10</span>
+                <h3>🎉 全 Bot 迁移至 Mohobot 新平台</h3>
+                <p>除言和 bot 外，所有 bot 已迁移至
+                    <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank">Mohobot</a>
+                    新平台。mohobot 框架是 @墨染荷韵 开发的多 bot 框架，一个进程同时接入多个 Bot，内置 Agent 流水线（话题规划 → 结构化回复 → 反思记忆）、插件系统、上下文 AI 总结压缩等。
+                </p>
+                <p style="margin-top: 10px;"><strong>与原先相比，体验改进：</strong></p>
+                <ul>
+                    <li>更好的上下文管理：会话窗口 AI 总结，群聊上下文感知</li>
+                    <li>AgentLuo 模式的对话提升，bot 会对你生成用户画像，进一步增进感情</li>
+                    <li>长期记忆维持</li>
+                </ul>
+                <p style="margin-top: 8px;"><em>* AgentLuo 模式目前只在天依 beta 中开放</em></p>
+            </div>
+        </section>
+
+        <!-- ===== 功能一览 ===== -->
+        <section id="features">
+            <h2>✨ 功能一览</h2>
             <div class="warning"
                 style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-color: #4caf50;">
-                <strong>🎵 欢迎来到墨染荷韵的中Vbot群！</strong>
-                <p style="margin-top: 10px; color: #2e7d32;">让我们一起营造一个良好的中V同好交流群 ✿</p>
-
+                <strong>🤖 AI 大模型对话：</strong>基于 DeepSeek V4 Flash，私聊全部开放，群聊仅 @ 或引用时回复。
             </div>
 
+            <h3>🎮 快捷指令</h3>
+            <ul class="feature-list">
+                <li>📊 查看系统状态：<code>/status</code></li>
+                <li>👍 个人名片点赞：<code>/赞我</code></li>
+                <li>💘 抽老婆功能：<code>/今日老婆</code> · <code>/关系图</code> · <code>/强娶 @墨染荷韵</code> · <code>/求婚 @墨染荷韵</code></li>
+                <li>🎵 网易云点歌：<code>/点歌 告死鸟</code></li>
+                <li>❓ 更多指令请发送 <code>/help</code></li>
+            </ul>
+
+            <div class="h3-collapsible">
+                <div class="h3-toggle">💬 会话管理（进阶玩法）</div>
+                <div class="h3-content">
+                    <p>会话是什么东西呢？简单的说，就是<strong>隔离 bot 的记忆</strong>。可以类比于豆包 app 的多会话功能，不同会话之间的上下文是隔绝的，bot 对你的印象也是不同的。</p>
+                    <p style="margin-top: 10px;"><strong>总指令：<code>/sess</code></strong></p>
+                    <ul class="rules-list">
+                        <li><code>/sess list</code> 查看所有会话列表</li>
+                        <li><code>/sess new &lt;name&gt;</code> 创建新会话</li>
+                        <li><code>/sess switch &lt;id&gt;</code> 切换会话</li>
+                        <li><code>/sess del &lt;id&gt;</code> 删除会话</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>会话内指令：</strong></p>
+                    <ul class="rules-list">
+                        <li><code>/hist</code> 显示当前会话上下文（调试功能）</li>
+                        <li><code>/forget &lt;N&gt;</code> 忘记最近 N 轮对话</li>
+                        <li><code>/clear</code> 清空当前会话</li>
+                    </ul>
+                    <p style="margin-top: 10px;">如果你没有看懂也没事，因为这些功能你不用也没有问题，只作为<strong>进阶玩法</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 使用方式 ===== -->
+        <section id="usage">
+            <h2>📖 使用方式</h2>
 
             <h3>🤖 群内 Bot 列表</h3>
             <div class="bot-tag-list">
@@ -75,96 +129,9 @@
                     <span class="bot-tag-link" style="cursor:default;">墨清弦 alpha</span>
                     <span class="bot-tag-qq">（进群获取）</span>
                 </div>
-
             </div>
             <p>进群获取&内测更多bot（群号在最上方），未来还会继续更新</p>
 
-            <div class="h3-collapsible expanded">
-                <div class="h3-toggle">💬 与 Bot 互动方式</div>
-                <div class="h3-content">
-                    <ul class="rules-list">
-                        <li><strong>私聊：</strong>群内所有 Bot 均可直接私聊，完全开放</li>
-                        <li><strong>群聊：</strong>需 <span class="highlight">@Bot</span> 或 <span class="highlight">引用 Bot
-                                消息</span> 才会回复</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="h3-collapsible expanded">
-                <div class="h3-toggle">📥 拉 Bot 入群规则</div>
-                <div class="h3-content">
-                    <p>若要将 Bot 拉入任何群聊，都需向管理员 <strong>墨染荷韵（QQ：3831097597）</strong> 私聊申请：</p>
-                    <ul class="rules-list">
-                        <li><strong>泛中 V 交流群：</strong>申请后管理会直接通过（三分之二以上群成员就行）</li>
-                        <li>对于6人以下的小群，在报备之后也可以直接通过</li>
-                        <li><strong>其他群聊：</strong>需提供以下材料：
-                            <ol>
-                                <li>群内主要内容简述（20 字以上）</li>
-                                <li>拉 Bot 进群原因（80 字以上）</li>
-                                <li>群内管理/群主同意，大部分群友知情并同意</li>
-                            </ol>
-                        </li>
-                        <li><strong>申请审核模板</strong>（请按此格式私信管理员）：
-                            <pre style="background:#f5f3ff; border:1px solid #e5d9ff; border-radius:8px; padding:10px 14px; margin:8px 0 0; font-family:inherit; font-size:13px; line-height:1.7; white-space:pre-wrap; word-break:break-word;">申请将 xxxbot（此处写QQ号）拉入 xxx群（给出群号）：
-群类型为：xxx
-本人在群内的身份为：群友/群管理/群主
-群相关审批材料：xxx
-已获得群内大部分活跃成员及管理员的同意（给出截图）</pre>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">⚠️ 群内注意事项</div>
-                <div class="h3-content">
-                    <ul class="rules-list">
-                        <li><strong>禁止</strong>血腥暴力、猎奇以及引起多数成员反感的内容，管理将撤回并根据情况移出群</li>
-                        <li><strong>严禁</strong>网暴、开盒（人肉搜索）他人等违法行为</li>
-                        <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！违者直接移出群</li>
-                        <li>对骂、互嘲一律有惩罚，先挑事者惩罚加倍。中间煽风点火者也会受到相应处罚。<br>
-                            群员可截图举报给群管，私人问题请私聊解决</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">🤖 Bot 使用规范</div>
-                <div class="h3-content">
-                    <p>仅限用于正常、健康的交流与娱乐。以下行为均被定性为违规：</p>
-                    <ul class="rules-list">
-                        <li>对 Bot 提出任何形式的<strong>性请求</strong>、角色扮演中的<strong>越界要求</strong>、<strong>暴力虐待</strong>指令</li>
-                        <li>恶意诱导 Bot 输出违规内容，或利用 Bot 进行<strong>骚扰、刷屏、引战</strong></li>
-                        <li>以「测试」「玩笑」为名实施上述行为，同样视为故意违规（自己体会，别过火）</li>
-                        <li><strong>滥用 Bot 功能</strong>，占用大量资源。如：发送大段无意义内容、短时间内发送大量消息（包括图片）、将 Bot 当做办公 agent 使用</li>
-                        <li>违反相关法律法规 &amp; 腾讯平台规定（<a
-                                href="https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201"
-                                target="_blank">QQ软件许可及服务协议</a>）的行为</li>
-                    </ul>
-                    <p><strong>处罚措施：</strong>违规一次警告，二次直接拉黑。
-                        <em style="color: #888;">（后台都是可以看到的哦）</em>
-                    </p>
-                </div>
-            </div>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">🔒 隐私与声明</div>
-                <div class="h3-content">
-                    <ul class="rules-list">
-                        <li>我们会尊重并保护您的个人隐私，所有聊天记录均不会在未经您授权的情况下公开，但这不代表我们不会检查聊天记录</li>
-                        <li>管理组拥有对违规行为的<strong>最终解释与处置权</strong>，有全天实时聊天日志，可视情形处以短期封禁等处罚，严重者直接中断服务</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p style="text-align: center; margin-top: 20px; color: #888;">
-                望各位自觉遵守，感谢您能看到这里 ❤️
-            </p>
-        </section>
-
-        <!-- ===== 使用方式 ===== -->
-        <section id="usage">
-            <h2>📖 使用方式</h2>
             <h3>AI 对话功能</h3>
             <p><strong>私聊：</strong>完全开放，直接添加 Bot 好友即可使用。</p>
             <p><strong>群聊：</strong>仅当 <span class="highlight">@Bot</span> 或 <span class="highlight">引用消息</span> 时才会回复。
@@ -230,8 +197,8 @@
                 </div>
                 <div class="qa-a" style="display:none;">
                     ✅ <strong>可以分享推荐</strong>（建议 Q群/QQ空间，不建议B站等公开平台）<br><br>
-                    ✅ <strong>拉群需联系管理员</strong>，具体要求请查看上方 <a href="#group-intro"
-                        style="color:#764ba2;font-weight:bold;">「进群必读」</a> 中的拉群规则。
+                    ✅ <strong>拉群需联系管理员</strong>，具体要求请查看 <a href="#rules"
+                        style="color:#764ba2;font-weight:bold;">「群规与使用规范」</a> 中的拉群规则。
                 </div>
             </div>
 
@@ -281,6 +248,68 @@
             </div>
         </section>
 
+        <!-- ===== 群规与使用规范 ===== -->
+        <section id="rules">
+            <h2>📜 群规与使用规范</h2>
+
+            <div class="h3-collapsible expanded">
+                <div class="h3-toggle">📥 拉 Bot 入群规则</div>
+                <div class="h3-content">
+                    <p>若要将 Bot 拉入任何群聊，都需向管理员 <strong>墨染荷韵（QQ：3831097597）</strong> 私聊申请：</p>
+                    <ul class="rules-list">
+                        <li><strong>泛中 V 交流群：</strong>申请后管理会直接通过（三分之二以上群成员就行）</li>
+                        <li>对于6人以下的小群，在报备之后也可以直接通过</li>
+                        <li><strong>其他群聊：</strong>需提供以下材料：
+                            <ol>
+                                <li>群内主要内容简述（20 字以上）</li>
+                                <li>拉 Bot 进群原因（80 字以上）</li>
+                                <li>群内管理/群主同意，大部分群友知情并同意</li>
+                            </ol>
+                        </li>
+                        <li><strong>申请审核模板</strong>（请按此格式私信管理员）：
+                            <pre style="background:#f5f3ff; border:1px solid #e5d9ff; border-radius:8px; padding:10px 14px; margin:8px 0 0; font-family:inherit; font-size:13px; line-height:1.7; white-space:pre-wrap; word-break:break-word;">申请将 xxxbot（此处写QQ号）拉入 xxx群（给出群号）：
+群类型为：xxx
+本人在群内的身份为：群友/群管理/群主
+群相关审批材料：xxx
+已获得群内大部分活跃成员及管理员的同意（给出截图）</pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h3-collapsible">
+                <div class="h3-toggle">⚠️ 群内注意事项</div>
+                <div class="h3-content">
+                    <ul class="rules-list">
+                        <li><strong>禁止</strong>血腥暴力、猎奇以及引起多数成员反感的内容，管理将撤回并根据情况移出群</li>
+                        <li><strong>严禁</strong>网暴、开盒（人肉搜索）他人等违法行为</li>
+                        <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！违者直接移出群</li>
+                        <li>对骂、互嘲一律有惩罚，先挑事者惩罚加倍。中间煽风点火者也会受到相应处罚。<br>
+                            群员可截图举报给群管，私人问题请私聊解决</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h3-collapsible">
+                <div class="h3-toggle">🤖 Bot 使用规范</div>
+                <div class="h3-content">
+                    <p>仅限用于正常、健康的交流与娱乐。以下行为均被定性为违规：</p>
+                    <ul class="rules-list">
+                        <li>对 Bot 提出任何形式的<strong>性请求</strong>、角色扮演中的<strong>越界要求</strong>、<strong>暴力虐待</strong>指令</li>
+                        <li>恶意诱导 Bot 输出违规内容，或利用 Bot 进行<strong>骚扰、刷屏、引战</strong></li>
+                        <li>以「测试」「玩笑」为名实施上述行为，同样视为故意违规（自己体会，别过火）</li>
+                        <li><strong>滥用 Bot 功能</strong>，占用大量资源。如：发送大段无意义内容、短时间内发送大量消息（包括图片）、将 Bot 当做办公 agent 使用</li>
+                        <li>违反相关法律法规 &amp; 腾讯平台规定（<a
+                                href="https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201"
+                                target="_blank">QQ软件许可及服务协议</a>）的行为</li>
+                    </ul>
+                    <p><strong>处罚措施：</strong>违规一次警告，二次直接拉黑。
+                        <em style="color: #888;">（后台都是可以看到的哦）</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== 其它事项 ===== -->
         <section id="notice">
             <h2>⚠️ 其它事项</h2>
@@ -300,7 +329,7 @@
 
             <div class="warning">
                 <strong>📌 违规处理提醒：</strong>
-                详细的 Bot 使用规范与群内规则已在 <a href="#group-intro" style="color:#764ba2;font-weight:bold;">「进群必读」</a>
+                详细的 Bot 使用规范与群内规则已在 <a href="#rules" style="color:#764ba2;font-weight:bold;">「群规与使用规范」</a>
                 中完整列出，请务必阅读并遵守。<br>
                 违规一次警告，二次直接拉黑。管理组拥有最终解释与处置权。
             </div>
@@ -332,7 +361,12 @@
                     您不得利用本 Bot 生成、传播任何违法、违规或违背公序良俗的信息。如因您的使用行为导致任何第三方索赔、行政或刑事责任，由您自行负责处理并赔偿开发者因此遭受的损失。
                 </p>
 
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">四、其他条款</h3>
+                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">四、隐私与数据</h3>
+                <p style="margin-bottom: 12px; color: #555;">
+                    我们会尊重并保护您的个人隐私，所有聊天记录均不会在未经您授权的情况下公开，但这不代表我们不会检查聊天记录。管理组拥有对违规行为的<strong>最终解释与处置权</strong>，有全天实时聊天日志，可视情形处以短期封禁等处罚，严重者直接中断服务。
+                </p>
+
+                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">五、其他条款</h3>
                 <p style="margin-bottom: 12px; color: #555;">
                     本声明最终解释权归本人（3831097597）所有。开发者保留随时修改本声明内容的权利，修改后的声明一经发布即生效，请您定期查阅。如您不同意本声明，请立即停止使用天依/言和 Bot。
                 </p>

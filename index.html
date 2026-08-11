@@ -286,23 +286,22 @@
         </footer>
     </div>
 
-    <script>
-        // accordion
-        document.querySelectorAll('.vc-acc-h').forEach(function(h){
-            h.addEventListener('click', function(){ h.parentElement.classList.toggle('open'); });
-        });
-        // scroll reveal
-        var io = new IntersectionObserver(function(ents){
-            ents.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.vc-up').forEach(function(el){ io.observe(el); });
-        // rail active highlight
-        var railLinks = Array.prototype.slice.call(document.querySelectorAll('.vc-rail a'));
-        var secIds = ['log','fn','use','qa','rule','note','legal','team','fund'];
-        var ro = new IntersectionObserver(function(ents){
-            ents.forEach(function(e){ if(e.isIntersecting){ var id=e.target.id; railLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+id); }); } });
-        }, { rootMargin: '-45% 0px -50% 0px' });
-        secIds.forEach(function(id){ var el=document.getElementById(id); if(el) ro.observe(el); });
-    </script>
+    <script>// accordion
+document.querySelectorAll('.vc-acc-h').forEach(function(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});});
+// topbar shrink
+var top=document.getElementById('vcTop');
+window.addEventListener('scroll',function(){if(top)top.classList.toggle('shrink', window.scrollY>40);});
+// reveal observer
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.vc-up,.vc-fly,.vc-flyr,.vc-zoom').forEach(function(el){io.observe(el);});
+// rail active
+var rails=Array.prototype.slice.call(document.querySelectorAll('.vc-rail a'));
+var ids=['log','fn','use','qa','rule','note','legal','team','fund'];
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;rails.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+ids.forEach(function(id){var el=document.getElementById(id);if(el)ro.observe(el);});
+// hero parallax (scroll-driven, keeps animating)
+window.addEventListener('scroll',function(){var h=document.querySelector('.vc-hero');if(h){var y=window.scrollY;if(y<window.innerHeight){var p=y*0.12;var t=h.querySelector('.vc-title');if(t)t.style.transform='translateY('+p+'px)';var st=h.querySelector('.vc-stats');if(st)st.style.transform='translateY('+0.6*p+'px)';var au=h.querySelector('.vc-aurora');if(au)au.style.opacity=1-y/1200;}}});
+// persistent float on aura (not one-shot)
+requestAnimationFrame(function frame(t){var am=document.querySelector('.vc-a3');if(am){am.style.transform='translateY('+Math.sin(t/1000)*14+'px)';}requestAnimationFrame(frame);});</script>
 </body>
 </html>

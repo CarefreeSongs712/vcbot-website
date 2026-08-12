@@ -66,7 +66,7 @@ body {
 .vc-bot-halo { position:absolute; top:-40px; right:-40px; width:120px; height:120px; border-radius:50%; background:var(--bc, #66CCFF); filter:blur(30px); opacity:.35; }
 .vc-bot-art { display:none; }
 .vc-bot-n { position:relative; top:auto; left:auto; z-index:3; font-family:var(--display); font-size:26px; font-weight:700; color:var(--bc, #2b9fe0); text-shadow:0 2px 10px rgba(255,255,255,.95); line-height:1.2; margin-bottom:6px; }
-.vc-bot-v { display:inline-block; font-family:var(--mono); font-size:11px; color:var(--bc,#2b9fe0); background:rgba(102,204,255,.14); border:1px solid var(--bc, rgba(102,204,255,.45)); border-radius:999px; padding:3px 10px; margin-top:8px; font-weight:700; letter-spacing:.02em; }
+.vc-bot-v { display:block; font-family:var(--mono); font-size:12px; color:var(--bc,#2b9fe0); margin-top:6px; font-weight:600; opacity:.6; }
 .vc-bot-btn { position:absolute; left:18px; bottom:18px; z-index:3; display:inline-block; padding:8px 16px; border-radius:999px; background:rgba(255,255,255,0.35); border:1px solid var(--bc, rgba(102,204,255,0.5)); color:var(--bc, #2b9fe0); text-decoration:none; font-size:12px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
 .vc-bot-btn:hover { background:var(--bc, #66CCFF); color:#fff; }
 @media (max-width:560px){ .vc-bot { min-height:200px; padding:14px; } .vc-bot-n { font-size:22px; } }

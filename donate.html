@@ -1,83 +1,411 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>捐赠信息 - 墨染荷韵的中 V Bot</title>
-<link rel="stylesheet" href="style.css">
-    <link rel='preconnect' href='https://fonts.googleapis.com'>
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=ZCOOL+KuaiLe&family=LXGW+WenKai+SC:wght@400;700&family=Mochiy+Pop+One&display=swap'>
-    <link rel='stylesheet' href='https://fonts.cdnfonts.com/css/marshmallow'>
-    <link rel='stylesheet' href='https://fonts.cdnfonts.com/css/mochiy-pop-one'>
-<style>
-.donation-summary { background:var(--glass); border:1px solid var(--glass-bd); backdrop-filter:blur(16px); border-radius:var(--radius); padding:20px; margin-bottom:22px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:15px; }
-.summary-item { text-align:center; }
-.summary-item .number { font-family:var(--mono); font-size:28px; font-weight:800; color:var(--cyan-deep); }
-.summary-item .label { font-size:14px; color:var(--muted); margin-top:4px; }
-.vc-donate-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
-.donation-card { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; box-shadow:var(--shadow); }
-.donation-card .amount { font-family:var(--mono); font-size:22px; font-weight:800; color:#e65100; margin-bottom:6px; }
-.donation-card .donor { font-size:16px; font-weight:700; color:var(--cyan-ink); margin-bottom:4px; }
-.donation-card .donor .anonymous { color:#999; font-style:italic; }
-.donation-card .message { color:var(--muted); margin:6px 0; font-size:14px; }
-.donation-card .date { font-family:var(--mono); font-size:12px; color:var(--muted); }
-.donation-card .tags { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
-.donation-card .tag { font-size:11px; padding:2px 8px; border-radius:999px; background:rgba(102,204,255,.18); color:var(--cyan-deep); }
-.empty-state { text-align:center; padding:40px 0; color:var(--muted); }
-.empty-state .icon { font-size:40px; }
-.donation-pagination { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; justify-content:center; }
-.donation-pagination button { font-family:var(--mono); min-width:38px; padding:8px 12px; border-radius:10px; background:var(--glass); border:1px solid var(--glass-bd); color:var(--cyan-deep); cursor:pointer; font-weight:700; transition:all .2s; }
-.donation-pagination button:hover { background:rgba(102,204,255,.25); }
-.donation-pagination button.active { background:linear-gradient(135deg,var(--cyan-deep),var(--cyan)); color:#fff; border-color:transparent; }
-.loading { color:var(--muted); font-size:14px; }
-.err-box { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; color:var(--muted); }
-.error-state{background:var(--glass);border:1px solid var(--glass-bd);border-radius:14px;padding:18px;color:var(--muted);}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捐赠信息 - 墨染荷韵的中V Bot</title>
+    <link rel="icon" href="favicon.ico?v=1" type="image/x-icon">
+    <style>
+        /* ===== Reset & Base ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.vc-sec{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-bd);border-radius:var(--radius);padding:22px 24px;margin-bottom:24px;box-shadow:var(--shadow);}
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-.vc-fly,.vc-flyr,.vc-zoom,.vc-up,.vc-up.d1,.vc-up.d2,.vc-up.d3,.vc-up.d4{opacity:1 !important;transform:none !important;transition:none !important;}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
 
-/* 月度统计：自适应玻璃表格 */
-.monthly-table-wrap { overflow-x:auto; margin-top:2px; border-radius:12px; }
-.monthly-table { width:100%; min-width:380px; border-collapse:collapse; font-size:14px; background:var(--glass); border:1px solid var(--glass-bd); border-radius:12px; overflow:hidden; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
-.monthly-table th { font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--muted); text-align:left; padding:12px 14px; border-bottom:1px solid var(--glass-bd); background:rgba(255,255,255,.45); white-space:nowrap; }
-.monthly-table td { padding:11px 14px; border-bottom:1px solid rgba(102,204,255,.16); font-family:var(--mono); font-size:13.5px; color:var(--cyan-ink); white-space:nowrap; }
-.monthly-table tbody tr:last-child td { border-bottom:none; }
-.monthly-table .income { color:#2fb36b; font-weight:700; }
-.monthly-table .expense { color:#e0556b; font-weight:700; }
-.monthly-table .total-row td { border-top:2px solid var(--glass-bd); font-weight:700; color:var(--cyan-deep); background:rgba(102,204,255,.12); }
-.monthly-empty { text-align:center; padding:30px 0; color:var(--muted); }
-</style>
+        /* ===== Header ===== */
+        header {
+            background: linear-gradient(135deg, #a3e0ff, #66ccff, #47b3e5);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            opacity: 0.95;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-1px);
+        }
+
+        /* ===== Sections ===== */
+        .section {
+            padding: 30px;
+        }
+
+        .section-title {
+            color: #764ba2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f093fb;
+            font-size: 22px;
+        }
+
+        /* ===== Donation Summary ===== */
+        .donation-summary {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 1px solid #4caf50;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .summary-item {
+            text-align: center;
+        }
+
+        .summary-item .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .summary-item .label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        /* ===== Donation Card ===== */
+        .donation-card {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border: 1px solid #ffe082;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .donation-card .amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .donation-card .donor {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .donation-card .donor .anonymous {
+            color: #999;
+            font-style: italic;
+        }
+
+        .donation-card .message {
+            color: #666;
+            margin: 6px 0;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .donation-card .meta {
+            font-size: 13px;
+            color: #999;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .donation-card .order-id {
+            font-family: Consolas, monospace;
+            background: rgba(0, 0, 0, 0.04);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ===== Pagination ===== */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin: 25px 0 10px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button,
+        .pagination .page-btn {
+            padding: 8px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            color: #555;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .pagination button:hover:not(:disabled),
+        .pagination .page-btn:hover:not(.active) {
+            background: #f5f5f5;
+            border-color: #bbb;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+            font-weight: bold;
+        }
+
+        .pagination .page-info {
+            font-size: 14px;
+            color: #888;
+            padding: 0 10px;
+        }
+
+        /* ===== Monthly Table ===== */
+        .monthly-table-wrap {
+            overflow-x: auto;
+            margin-bottom: 25px;
+        }
+
+        .monthly-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .monthly-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .monthly-table th {
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .monthly-table td {
+            padding: 10px 16px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .monthly-table tbody tr:hover {
+            background: #f8f9ff;
+        }
+
+        .monthly-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .monthly-table .income {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .monthly-table .expense {
+            color: #c0392b;
+        }
+
+        .monthly-table .total-row td {
+            font-weight: bold;
+            background: #f0f0f5;
+            border-top: 2px solid #764ba2;
+        }
+
+        .monthly-empty {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+        }
+
+        /* ===== States ===== */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .error-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #c0392b;
+            background: #fde8e8;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            opacity: 0.7;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .donation-summary {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .donation-card .meta {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .pagination button,
+            .pagination .page-btn {
+                padding: 6px 10px;
+                font-size: 13px;
+                min-width: 34px;
+            }
+
+            .monthly-table th,
+            .monthly-table td {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div class="vc-bg"><div class="vc-aurora vc-a1"></div><div class="vc-aurora vc-a2"></div><div class="vc-aurora vc-a3"></div><div class="vc-grid"></div></div>
-<div class="vc-bgimg"></div>
-<div class="vc-top" id="vcTop"><div class="logo" id="vcLogo">墨染<b>荷韵</b> · 中V Bot</div><nav><a href="index.html">← 返回主页</a></nav></div>
-<main class="vc-wrap">
-<header class="vc-hero-banner">
-<div class="vc-kicker"><span>SUPPORT US</span><span>DONATION</span></div>
-<h1 class="vc-title vc-zoom">💰 捐赠信息</h1>
-<p class="vc-sub vc-fly d1">感谢每一位支持者的慷慨赞助 ♥ 数据来自 donate.txt，不定期更新。</p>
-</header>
+    <div class="container">
+        <!-- ===== Header ===== -->
+        <header>
+            <h1>💰 捐赠信息</h1>
+            <p>感谢每一位支持者的慷慨赞助 ❤️</p>
+            <a href="index.html" class="back-link">← 返回主页</a>
+        </header>
 
+        <!-- ===== 月度统计 ===== -->
+        <div class="section">
+            <h2 class="section-title">📊 月度统计</h2>
+            <div id="monthly-container">
+                <p class="loading">⏳ 加载中...</p>
+            </div>
+        </div>
 
-<section class="vc-sec">
-<div class="vc-sechead"><span class="vc-secnum">01</span><h2 class="vc-sectitle">月度统计</h2><span class="vc-seclatin">MONTHLY</span></div>
-<div id="monthly-container"><p class="loading">加载中...</p></div>
-</section>
+        <!-- ===== 捐赠列表 ===== -->
+        <div class="section">
+            <h2 class="section-title">📜 捐赠列表</h2>
+            <div id="donation-container">
+                <p class="loading">⏳ 加载中...</p>
+            </div>
+        </div>
 
-<section class="vc-sec">
-<div class="vc-sechead"><span class="vc-secnum">02</span><h2 class="vc-sectitle">捐赠列表</h2><span class="vc-seclatin">RECORDS</span></div>
-<div id="donation-container"><p class="loading">加载中...</p></div>
-</section>
+        <!-- ===== Footer ===== -->
+        <footer>
+            <p>🎵 墨染荷韵的中V Bot | 数据不定期更新</p>
+            <p><a href="index.html">← 返回主页</a></p>
+        </footer>
+    </div>
 
-<footer class="vc-foot" id="donateFoot">
-<p>加载中...</p>
-<p><a href="index.html" class="vc-chip">返回主页</a></p>
-</footer>
-</main>
-<script>
+    <script>
         // ===== 工具函数 =====
         function escapeHtml(str) {
             if (!str) return '';
@@ -96,8 +424,8 @@
                 for (const line of lines) {
                     if (line.startsWith('金额：')) {
                         entry.amount = line.replace('金额：', '').trim();
-                    } else if (line.startsWith('赞助方：')) {
-                        entry.donor = line.replace('赞助方：', '').trim();
+                    } else if (line.startsWith('赞赏方：')) {
+                        entry.donor = line.replace('赞赏方：', '').trim();
                     } else if (line.startsWith('留言：')) {
                         entry.message = line.replace('留言：', '').trim();
                     } else if (line.startsWith('时间：')) {
@@ -107,8 +435,10 @@
                     }
                 }
                 if (entry.amount) {
+                    // 解析金额数值
                     const numStr = entry.amount.replace(/[^0-9.]/g, '');
                     entry.amountNum = parseFloat(numStr) || 0;
+                    // 解析月份键（用于分组）
                     if (entry.time) {
                         const match = entry.time.match(/(\d{4})年(\d{1,2})月/);
                         if (match) {
@@ -126,24 +456,36 @@
         }
 
         // ===== 渲染月度统计表 =====
-        function renderMonthlyTable(entries, expenseMap, meta) {
+        function renderMonthlyTable(entries) {
+			const expenseMap = {
+			'2026-02': 66.31,
+			'2026-03': 86.32,
+			'2026-04': 44.97,
+			'2026-05': 187.69,
+			'2026-06': 92.90,
+			'2026-07': 349.89,
+			'2026-08': 98.91
+			}
+        
             const container = document.getElementById('monthly-container');
-            const emptyText = (meta && meta.empty) || '暂无数据';
-            const parseErrorText = (meta && meta.parseError) || '无法解析月份信息';
 
             if (!entries || entries.length === 0) {
-                container.innerHTML = '<div class="monthly-empty">' + escapeHtml(emptyText) + '</div>';
+                container.innerHTML = '<div class="monthly-empty">暂无数据</div>';
                 return;
             }
 
+            // 按月分组统计收入
             const monthMap = {};
             entries.forEach(e => {
                 const key = e.monthKey || 'unknown';
-                if (!monthMap[key]) { monthMap[key] = { income: 0, count: 0 }; }
+                if (!monthMap[key]) {
+                    monthMap[key] = { income: 0, count: 0 };
+                }
                 monthMap[key].income += e.amountNum;
                 monthMap[key].count += 1;
             });
-            
+			
+            // 合并有捐赠的月份和有支出的月份，按降序排列
             const allMonths = new Set([
                 ...Object.keys(monthMap).filter(k => k !== 'unknown'),
                 ...Object.keys(expenseMap)
@@ -151,10 +493,11 @@
             const monthArr = Array.from(allMonths).sort((a, b) => b.localeCompare(a));
 
             if (monthArr.length === 0) {
-                container.innerHTML = '<div class="monthly-empty">' + escapeHtml(parseErrorText) + '</div>';
+                container.innerHTML = '<div class="monthly-empty">无法解析月份信息</div>';
                 return;
             }
 
+            // 计算总计
             let totalIncome = 0;
             let totalCount = 0;
             let totalExpense = 0;
@@ -179,6 +522,7 @@
 
             monthArr.forEach(k => {
                 const data = monthMap[k];
+                // 月份显示：2026-07 → 2026年7月
                 const parts = k.split('-');
                 const displayMonth = parts[0] + '年' + parseInt(parts[1]) + '月';
                 html += `
@@ -191,9 +535,10 @@
                 `;
             });
 
+            // 合计行
             html += `
                     <tr class="total-row">
-                        <td>📍 合计</td>
+                        <td>📌 合计</td>
                         <td>${totalCount}</td>
                         <td class="income">${totalIncome.toFixed(2)}</td>
                         <td class="expense">${totalExpense.toFixed(2)}</td>
@@ -212,15 +557,14 @@
         let currentPage = 1;
         let allEntries = [];
 
-        function renderDonationPage(page, meta) {
+        function renderDonationPage(page) {
             const container = document.getElementById('donation-container');
-            const emptyText = (meta && meta.empty) || '暂无捐赠记录';
 
             if (!allEntries || allEntries.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
                         <div class="icon">📭</div>
-                        <p>${escapeHtml(emptyText)}</p>
+                        <p>暂无捐赠记录</p>
                     </div>
                 `;
                 return;
@@ -234,14 +578,16 @@
             const end = Math.min(start + PAGE_SIZE, allEntries.length);
             const pageEntries = allEntries.slice(start, end);
 
+            // 统计总金额
             let totalAmount = 0;
             allEntries.forEach(e => { totalAmount += e.amountNum; });
 
+            // 构建 HTML
             let html = `
                 <div class="donation-summary">
                     <div class="summary-item">
                         <div class="number">${allEntries.length}</div>
-                        <div class="label">♥ 总捐赠人次</div>
+                        <div class="label">❤️ 总捐赠人次</div>
                     </div>
                     <div class="summary-item">
                         <div class="number">${totalAmount.toFixed(2)}</div>
@@ -272,9 +618,12 @@
                 `;
             });
 
+            // 分页控件
             html += buildPagination(totalPages, validPage);
+
             container.innerHTML = html;
 
+            // 绑定分页事件
             document.querySelectorAll('.page-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const p = parseInt(this.dataset.page);
@@ -297,10 +646,14 @@
 
         function buildPagination(totalPages, current) {
             if (totalPages <= 1) return '';
+
             let html = '<div class="pagination">';
+
+            // 上一页
             html += `<button class="page-nav" data-page="${current - 1}" ${current <= 1 ? 'disabled' : ''}>‹ 上一页</button>`;
 
-            const vw = window.innerWidth || 800; let maxVisible = vw < 560 ? 3 : (vw < 900 ? 5 : 7);
+            // 页码按钮 - 显示最多7个
+            const maxVisible = 7;
             let startP = Math.max(1, current - Math.floor(maxVisible / 2));
             let endP = Math.min(totalPages, startP + maxVisible - 1);
             if (endP - startP + 1 < maxVisible) {
@@ -321,7 +674,9 @@
                 html += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
             }
 
+            // 下一页
             html += `<button class="page-nav" data-page="${current + 1}" ${current >= totalPages ? 'disabled' : ''}>下一页 ›</button>`;
+
             html += '</div>';
             return html;
         }
@@ -331,31 +686,32 @@
             const donationContainer = document.getElementById('donation-container');
             const monthlyContainer = document.getElementById('monthly-container');
 
-            Promise.all([
-                fetch('donate.txt').then(r => { if (!r.ok) throw new Error('无法加载 donate.txt (HTTP ' + r.status + ')'); return r.text(); }),
-                fetch('site-data/expenses.json').then(r => { if (!r.ok) throw new Error('无法加载 site-data/expenses.json (HTTP ' + r.status + ')'); return r.json(); }),
-                fetch('site-data/donate-meta.json').then(r => { if (!r.ok) throw new Error('无法加载 site-data/donate-meta.json (HTTP ' + r.status + ')'); return r.json(); })
-            ])
-            .then(([text, expenseMap, meta]) => {
-                allEntries = parseDonateData(text);
-                renderMonthlyTable(allEntries, expenseMap || {}, meta || {});
-                renderDonationPage(1, meta || {});
-                window.addEventListener('resize', function(){ renderDonationPage(currentPage, meta || {}); });
-                const foot = document.getElementById('donateFoot');
-                if (foot && meta && meta.footer) foot.querySelector('p').textContent = meta.footer;
-            })
-            .catch(err => {
-                console.error('加载捐赠数据失败:', err);
-                const errHtml = `
-                    <div class="error-state">
-                        <strong>❌ 加载失败</strong>
-                        <p style="margin-top:10px;color:#555;">${escapeHtml(err.message)}</p>
-                        <p style="margin-top:8px;color:#888;">请确认 donate.txt 与 site-data 目录下的文件存在且与此页面路径匹配。</p>
-                    </div>
-                `;
-                donationContainer.innerHTML = errHtml;
-                monthlyContainer.innerHTML = errHtml;
-            });
+            fetch('donate.txt')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('无法加载 donate.txt (HTTP ' + response.status + ')');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    allEntries = parseDonateData(data);
+                    // 渲染月度表
+                    renderMonthlyTable(allEntries);
+                    // 渲染分页列表（第一页）
+                    renderDonationPage(1);
+                })
+                .catch(err => {
+                    console.error('加载捐赠数据失败:', err);
+                    const errHtml = `
+                        <div class="error-state">
+                            <strong>❌ 加载失败</strong>
+                            <p style="margin-top:10px;color:#555;">${escapeHtml(err.message)}</p>
+                            <p style="margin-top:8px;color:#888;">请确认 donate.txt 文件与此页面在同一目录下。</p>
+                        </div>
+                    `;
+                    donationContainer.innerHTML = errHtml;
+                    monthlyContainer.innerHTML = errHtml;
+                });
         })();
     </script>
 </body>

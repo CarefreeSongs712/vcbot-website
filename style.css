@@ -36,7 +36,8 @@ body {
 
 /* ===== hero banner: AERO glass, 60 percent ===== */
 .vc-wrap { max-width:1100px; margin:0 auto; padding:90px 22px 70px; position:relative; z-index:1; }
-.vc-hero { background:rgba(255,255,255,0.6); backdrop-filter:blur(22px) saturate(160%); -webkit-backdrop-filter:blur(22px) saturate(160%); border:1px solid rgba(102,204,255,0.5); box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,0.7); border-radius:28px; padding:42px 44px; margin-bottom:34px; overflow:hidden; position:relative; }
+.vc-hero-banner { background:rgba(255,255,255,0.6); backdrop-filter:blur(22px) saturate(160%); -webkit-backdrop-filter:blur(22px) saturate(160%); border:1px solid rgba(102,204,255,0.5); box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,0.7); border-radius:28px; padding:40px 44px; margin-bottom:24px; overflow:hidden; position:relative; }
+.vc-hero-cards { background:rgba(255,255,255,0.6); backdrop-filter:blur(22px) saturate(160%); -webkit-backdrop-filter:blur(22px) saturate(160%); border:1px solid rgba(102,204,255,0.5); box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,0.7); border-radius:28px; padding:34px 36px; margin-bottom:34px; overflow:hidden; position:relative; }
 .vc-kicker { display:flex; gap:16px; font-family:var(--mono); font-size:11px; letter-spacing:.22em; color:var(--cyan-deep); margin-bottom:18px; flex-wrap:wrap; }
 .vc-title { font-family:var(--display); font-size:46px; line-height:1.18; font-weight:900; background:linear-gradient(120deg,var(--cyan-deep),var(--cyan) 60%,#aee7ff); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .vc-sub { color:var(--muted); font-size:15px; margin:16px 0 18px; max-width:62ch; }
@@ -78,5 +79,5 @@ body {
 .vc-zoom { opacity:0; transform:scale(.88); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .vc-zoom.in { opacity:1; transform:none; }
 @media (max-width:900px){ .vc-top nav { display:none; } .vc-title { font-size:34px; } }
-@media (max-width:560px){ .vc-wrap { padding:84px 14px 60px; } .vc-hero { padding:28px 20px; } .vc-title { font-size:30px; } .vc-sectitle { font-size:22px; } }
+@media (max-width:560px){ .vc-wrap { padding:84px 14px 60px; } .vc-hero-banner { padding:26px 18px; border-radius:20px; } .vc-hero-cards { padding:22px 16px; border-radius:20px; } .vc-title { font-size:30px; } .vc-sectitle { font-size:22px; } }
 @media (prefers-reduced-motion:reduce){ .vc-up,.vc-fly,.vc-flyr,.vc-zoom{opacity:1!important;transform:none!important;transition:none!important;} .vc-marquee-track,.vc-aurora{animation:none!important;} *{scroll-behavior:auto!important;} }

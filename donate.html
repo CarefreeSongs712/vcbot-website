@@ -1,121 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>捐赠信息 - 墨染荷韵的中 V Bot</title>
-    <link rel="icon" href="favicon.ico?v=1" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* 捐赠专用组件（数据卡片/表格/分页，逻辑保持不变） */
-        .donation-summary {
-            background: rgba(255,255,255,0.6);
-            border: 1px solid var(--glass-bd);
-            backdrop-filter: blur(8px);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .summary-item { text-align: center; }
-        .summary-item .number { font-size: 28px; font-weight: 800; color: #2e7d32; }
-        .summary-item .label { font-size: 14px; color: var(--ink-soft); margin-top: 4px; }
-
-        .donation-card {
-            background: rgba(255,255,255,0.6);
-            border: 1px solid var(--glass-bd);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            margin: 15px 0;
-            box-shadow: 0 2px 8px rgba(120,100,200,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .donation-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(123,92,255,0.2); }
-        .donation-card .amount { font-size: 24px; font-weight: 800; color: #e65100; margin-bottom: 8px; }
-        .donation-card .donor { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-        .donation-card .donor .anonymous { color: #999; font-style: italic; }
-        .donation-card .message {
-            color: var(--ink-soft); margin: 6px 0;
-            padding: 8px 12px; background: rgba(255,255,255,0.6);
-            border-radius: 10px; font-style: italic;
-        }
-        .donation-card .meta {
-            font-size: 13px; color: #999; margin-top: 8px;
-            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
-        }
-        .donation-card .order-id {
-            font-family: Consolas, monospace;
-            background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 6px;
-        }
-
-        .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin: 25px 0 10px; flex-wrap: wrap; }
-        .pagination button, .pagination .page-btn {
-            padding: 8px 14px; border: 1px solid var(--glass-bd); border-radius: 10px;
-            background: rgba(255,255,255,0.6); color: var(--ink-soft);
-            cursor: pointer; font-size: 14px; transition: all 0.2s; min-width: 40px; text-align: center;
-        }
-        .pagination button:hover:not(:disabled), .pagination .page-btn:hover:not(.active) { background: #fff; }
-        .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
-        .pagination .page-btn.active {
-            background: linear-gradient(135deg, var(--lt-cyan), var(--mo-violet));
-            color: #fff; border-color: transparent; font-weight: 700;
-        }
-        .pagination .page-info { font-size: 14px; color: #999; padding: 0 10px; }
-
-        .monthly-table-wrap { overflow-x: auto; margin-bottom: 25px; }
-        .monthly-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        .monthly-table thead { background: linear-gradient(135deg, var(--lt-cyan), var(--mo-violet)); color: #fff; }
-        .monthly-table th { padding: 12px 16px; text-align: center; font-weight: 700; }
-        .monthly-table td { padding: 10px 16px; text-align: center; border-bottom: 1px solid rgba(120,100,200,0.12); }
-        .monthly-table tbody tr:hover { background: rgba(255,255,255,0.45); }
-        .monthly-table tbody tr:last-child td { border-bottom: none; }
-        .monthly-table .income { color: #2e7d32; font-weight: 700; }
-        .monthly-table .expense { color: #c0392b; }
-        .monthly-table .total-row td { font-weight: 700; background: rgba(123,92,255,0.08); border-top: 2px solid var(--mo-violet); }
-        .monthly-empty, .empty-state { text-align: center; padding: 40px; color: #999; }
-        .empty-state .icon { font-size: 48px; margin-bottom: 15px; }
-        .loading { text-align: center; padding: 40px; color: #999; font-size: 16px; }
-        .error-state { text-align: center; padding: 40px 20px; color: #c0392b; background: rgba(253,232,232,0.7); border-radius: 12px; margin: 20px 0; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捐赠信息 - 墨染荷韵的中 V Bot</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.donation-summary { background:var(--glass); border:1px solid var(--glass-bd); backdrop-filter:blur(16px); border-radius:var(--radius); padding:20px; margin-bottom:22px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:15px; }
+.summary-item { text-align:center; }
+.summary-item .number { font-family:var(--mono); font-size:28px; font-weight:800; color:var(--cyan-deep); }
+.summary-item .label { font-size:14px; color:var(--muted); margin-top:4px; }
+.vc-donate-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
+.donation-card { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; box-shadow:var(--shadow); }
+.donation-card .amount { font-family:var(--mono); font-size:22px; font-weight:800; color:#e65100; margin-bottom:6px; }
+.donation-card .donor { font-size:16px; font-weight:700; color:var(--cyan-ink); margin-bottom:4px; }
+.donation-card .donor .anonymous { color:#999; font-style:italic; }
+.donation-card .message { color:var(--muted); margin:6px 0; font-size:14px; }
+.donation-card .date { font-family:var(--mono); font-size:12px; color:var(--muted); }
+.donation-card .tags { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
+.donation-card .tag { font-size:11px; padding:2px 8px; border-radius:999px; background:rgba(102,204,255,.18); color:var(--cyan-deep); }
+.empty-state { text-align:center; padding:40px 0; color:var(--muted); }
+.empty-state .icon { font-size:40px; }
+.donation-pagination { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; justify-content:center; }
+.donation-pagination button { font-family:var(--mono); min-width:38px; padding:8px 12px; border-radius:10px; background:var(--glass); border:1px solid var(--glass-bd); color:var(--cyan-deep); cursor:pointer; font-weight:700; transition:all .2s; }
+.donation-pagination button:hover { background:rgba(102,204,255,.25); }
+.donation-pagination button.active { background:linear-gradient(135deg,var(--cyan-deep),var(--cyan)); color:#fff; border-color:transparent; }
+.loading { color:var(--muted); font-size:14px; }
+.err-box { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; color:var(--muted); }
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- ===== Header ===== -->
-        <header class="hero glass">
-            <h1>💰 捐赠信息</h1>
-            <p>感谢每一位支持者的慷慨赞助 ♥</p>
-            <a href="index.html" class="btn btn-soft">← 返回主页</a>
-        </header>
+<div class="vc-bg"><div class="vc-aurora vc-a1"></div><div class="vc-aurora vc-a2"></div><div class="vc-aurora vc-a3"></div><div class="vc-grid"></div></div>
+<div class="vc-bgimg"></div>
+<div class="vc-top" id="vcTop"><div class="logo" id="vcLogo">墨染<b>荷韵</b> · 中V Bot</div><nav><a href="index.html">← 返回主页</a></nav></div>
+<main class="vc-wrap">
+<header class="vc-hero-banner vc-up">
+<div class="vc-kicker"><span>SUPPORT US</span><span>DONATION</span></div>
+<h1 class="vc-title vc-zoom">💰 捐赠信息</h1>
+<p class="vc-sub vc-fly d1">感谢每一位支持者的慷慨赞助 ♥ 数据来自 donate.txt，不定期更新。</p>
+</header>
 
-        <!-- ===== 月度统计 ===== -->
-        <div class="section glass">
-            <h2>📊 月度统计</h2>
-            <div id="monthly-container">
-                <p class="loading">⏳ 加载中...</p>
-            </div>
-        </div>
 
-        <!-- ===== 捐赠列表 ===== -->
-        <div class="section glass">
-            <h2>📄 捐赠列表</h2>
-            <div id="donation-container">
-                <p class="loading">⏳ 加载中...</p>
-            </div>
-        </div>
+<section class="vc-sec vc-up">
+<div class="vc-sechead"><span class="vc-secnum">01</span><h2 class="vc-sectitle">月度统计</h2><span class="vc-seclatin">MONTHLY</span></div>
+<div id="monthly-container"><p class="loading">加载中...</p></div>
+</section>
 
-        <!-- ===== Footer ===== -->
-        <footer>
-            <p>🎵 墨染荷韵的中 V Bot | 数据不定期更新</p>
-            <p><a href="index.html" style="color:var(--accent);text-decoration:none;">← 返回主页</a></p>
-        </footer>
-    </div>
+<section class="vc-sec vc-up">
+<div class="vc-sechead"><span class="vc-secnum">02</span><h2 class="vc-sectitle">捐赠列表</h2><span class="vc-seclatin">RECORDS</span></div>
+<div id="donation-container"><p class="loading">加载中...</p></div>
+</section>
 
-    <script>
+<footer class="vc-foot">
+<p>墨染荷韵 中V Bot | 数据不定期更新</p>
+<p><a href="index.html" class="vc-chip">返回主页</a></p>
+</footer>
+</main>
+<script>
         // ===== 工具函数 =====
         function escapeHtml(str) {
             if (!str) return '';

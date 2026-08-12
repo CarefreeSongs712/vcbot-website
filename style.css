@@ -67,7 +67,7 @@ body {
 .vc-bot-art { display:none; }
 .vc-bot-n { position:relative; top:auto; left:auto; z-index:3; font-family:var(--display); font-size:26px; font-weight:700; color:var(--bc, #2b9fe0); text-shadow:0 2px 10px rgba(255,255,255,.95); line-height:1.2; margin-bottom:6px; }
 .vc-bot-v { font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:2px; font-weight:600; }
-.vc-bot-btn { position:relative; left:auto; bottom:auto; z-index:3; display:inline-block; padding:8px 16px; border-radius:999px; background:rgba(255,255,255,0.35); border:1px solid var(--bc, rgba(102,204,255,0.5)); color:var(--bc, #2b9fe0); text-decoration:none; font-size:12px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+.vc-bot-btn { position:absolute; left:18px; bottom:18px; z-index:3; display:inline-block; padding:8px 16px; border-radius:999px; background:rgba(255,255,255,0.35); border:1px solid var(--bc, rgba(102,204,255,0.5)); color:var(--bc, #2b9fe0); text-decoration:none; font-size:12px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
 .vc-bot-btn:hover { background:var(--bc, #66CCFF); color:#fff; }
 @media (max-width:560px){ .vc-bot { min-height:200px; padding:14px; } .vc-bot-n { font-size:22px; } }
 .vc-two { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; } .vc-note { background:var(--glass); backdrop-filter:blur(12px); border:1px solid var(--glass-bd); border-radius:12px; padding:14px 16px; color:var(--muted); font-size:14px; border-left:4px solid var(--cyan); margin-bottom:12px; } .vc-note.vc-danger { border-left-color:#ff6b8a; } .vc-note.vc-ok { border-left-color:#2fb36b; }

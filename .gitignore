@@ -1,0 +1,22 @@
+# ===== crawler / scratch artifacts (not part of the site) =====
+site-data/img/__pycache__/
+site-data/img/*.pyc
+site-data/img/*.py
+site-data/img/*.log
+site-data/img/bad_urls.txt
+site-data/img/cands.json
+site-data/img/moe.json
+site-data/img/ocr_report.json
+site-data/img/ocr_report_v2.json
+site-data/img/ocr_report_v3.json
+site-data/img/pool_bili_manifest.json
+site-data/img/pool_bili_raw_manifest.json
+site-data/img/pool/
+site-data/img/probe_chars/
+site-data/img/raw/
+site-data/img/review.log
+site-data/img/review_full.log
+
+# ===== misc =====
+.DS_Store
+*.swp

@@ -1,522 +1,292 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>墨染荷韵的中V Bot 介绍</title>
+    <title>墨染荷韵的中VBot站</title>
     <link rel="icon" href="favicon.ico?v=1" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@300;400;500&family=Chakra+Petch:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css">
 </head>
+<body><div class="vc-top" id="vcTop"><div class="logo" id="vcLogo" style="cursor:pointer">墨染<b>荷韵</b> · 中VBot站</div><nav><a href="#log">日志</a><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
+    <div class="vc-bg">
+        <div class="vc-aurora vc-a1"></div>
+        <div class="vc-aurora vc-a2"></div>
+        <div class="vc-aurora vc-a3"></div>
+        <div class="vc-grid"></div>
+    </div>
+    <div class="vc-grain"></div>
+    <div class="vc-bgimg"></div>
 
-<body>
-    <div class="container">
-        <!-- ===== Header ===== -->
-        <header>
-            <h1>🎤 墨染荷韵的中 V Bot 🎤</h1>
-            <p>拥有 AI 对话等诸多功能的 QQ 机器人</p>
-
-            <div class="admin-info">
-                📋 管理员：3831097597 <br>(<a href="https://qm.qq.com/q/S3tzU2t9K2" target="_blank">@墨染荷韵</a>)<br>
-                💬 交流群：398870315<br> (<a href="https://qm.qq.com/q/4NJ8ykYM80" target="_blank">墨染荷韵的中Vbot群</a>)
+    <div class="vc-wrap">
+        <header class="vc-up prx">
+            <div class="vc-hero-banner">
+                <div class="vc-kicker"><span>MOHOBOT RUNTIME</span><span>UPD 2026年8月12日</span></div>
+                <h1 class="vc-title vc-zoom">墨染荷韵的中VBot站</h1>
+                <p class="vc-sub vc-fly d1">拥有 AI 对话等诸多功能的 QQ 机器人，由上海禾念 vSinger 角色驱动——洛天依、言和、乐正绫、星尘、墨清弦，与你同行的虚拟歌姬们。</p>
+                <div class="vc-chips vc-fly d2">
+                    <a class="vc-chip" href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a>
+                    <a class="vc-chip" href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank" rel="noreferrer">人设提示词</a>
+                    <a class="vc-chip" href="donate.html" target="_blank" rel="noreferrer">赞助名单</a>
+                </div>
+            </div>
+            <div class="vc-hero-cards">
+                <div class="vc-idcards vc-flyr d2">
+                    <div class="vc-idcard"><div class="vc-idlabel">ADMIN</div><div class="vc-idval">3831097597</div><a class="vc-idname" href="https://qm.qq.com/q/S3tzU2t9K2" target="_blank" rel="noreferrer">@墨染荷韵</a></div>
+                    <div class="vc-idcard"><div class="vc-idlabel">GROUP</div><div class="vc-idval">398870315</div><a class="vc-idname" href="https://qm.qq.com/q/4NJ8ykYM80" target="_blank" rel="noreferrer">墨染荷韵的中Vbot群</a></div>
+                </div>
+                <div class="vc-stats vc-fly d3">
+                    <div class="vc-stat"><div class="vc-stat-k">RUNTIME</div><div class="vc-stat-v">Mohobot</div><div class="vc-stat-u">多bot框架</div></div>
+                    <div class="vc-stat"><div class="vc-stat-k">MODEL</div><div class="vc-stat-v">DeepSeek V4</div><div class="vc-stat-u">Flash</div></div>
+                    <div class="vc-stat"><div class="vc-stat-k">PRICE</div><div class="vc-stat-v">免费</div><div class="vc-stat-u">永久</div></div>
+                </div>
+                <div class="vc-marquee vc-fly d4"><div class="vc-marquee-track">
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>AGENT PIPELINE</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>LONG-TERM MEMORY</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>PLUGIN SYSTEM</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>MULTI PERSONA</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>FREE FOREVER</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>AGENT PIPELINE</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>LONG-TERM MEMORY</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>PLUGIN SYSTEM</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>MULTI PERSONA</span>
+                    <span class="vc-mq-item"><i class="vc-mq-dot"></i>FREE FOREVER</span>
+                </div></div>
             </div>
         </header>
-
-        <!-- ===== TOC ===== -->
-        <div class="toc-container">
-            <div class="toc-title">📑 快速导航</div>
-            <div class="toc-links">
-                <a href="#changelog" class="toc-link">更新日志</a>
-                <a href="#features" class="toc-link">功能一览</a>
-                <a href="#usage" class="toc-link">使用方式</a>
-                <a href="#qa" class="toc-link">常见Q&A</a>
-                <a href="#rules" class="toc-link">群规与规范</a>
-                <a href="#notice" class="toc-link">其它事项</a>
-                <a href="#disclaimer" class="toc-link">免责声明</a>
-                <a href="#team" class="toc-link">开发团队</a>
-                <a href="#donate" class="toc-link">感谢&赞助</a>
-            </div>
-
-        </div>
-
-        <!-- ===== 更新日志 ===== -->
-        <section id="changelog">
-            <h2>📣 更新日志</h2>
-            <div class="changelog-item">
-                <span class="changelog-date">2026.8.10</span>
-                <h3>🎉 全 Bot 迁移至 Mohobot 新平台</h3>
-                <p>除言和 bot 外，所有 bot 已迁移至
-                    <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank">Mohobot</a>
-                    新平台。mohobot 框架是 @墨染荷韵 开发的多 bot 框架，一个进程同时接入多个 Bot，内置 Agent 流水线（话题规划 → 结构化回复 → 反思记忆）、插件系统、上下文 AI 总结压缩等。
-                </p>
-                <p style="margin-top: 10px;"><strong>与原先相比，体验改进：</strong></p>
+        <section class="vc-sec" id="log">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">01</span><h2 class="vc-sectitle">更新日志</h2><span class="vc-seclatin">UPDATE LOG</span></div>
+            <div class="vc-tl vc-up">
+                <span class="vc-tl-dot"></span>
+                <div class="vc-tl-date">2026年8月12日</div>
+                <h3 class="vc-tl-title">🎉 全 Bot 迁移至 Mohobot 新平台</h3>
+                <p>除言和 bot 外，所有 bot 已迁移至 <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a> 新平台。mohobot 框架是 @墨染荷韵 开发的多 bot 框架，一个进程同时接入多个 Bot，内置 Agent 流水线（话题规划 → 结构化回复 → 反思记忆）、插件系统、上下文 AI 总结压缩等。</p>
+                <p style="margin-top:16px;margin-bottom:6px;color:var(--cyan-ink);font-size:14px;">与原先相比，体验改进：</p>
                 <ul>
                     <li>更好的上下文管理：会话窗口 AI 总结，群聊上下文感知</li>
-                    <li>AgentLuo 模式的对话提升，bot 会对你生成用户画像，进一步增进感情</li>
+                    <li>AgentLuo 模式的对谈提升，bot 会对谈生成用户画像，进一步增进感情</li>
                     <li>长期记忆维持</li>
                 </ul>
-                <p style="margin-top: 8px;"><em>* AgentLuo 模式目前只在天依 beta 中开放</em></p>
+                <p style="font-size:12.5px;color:var(--muted);margin-top:12px;font-style:italic;">* AgentLuo 模式目前只在天依 beta 中开放</p>
             </div>
         </section>
 
-        <!-- ===== 功能一览 ===== -->
-        <section id="features">
-            <h2>✨ 功能一览</h2>
-            <div class="warning"
-                style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-color: #4caf50;">
-                <strong>🤖 AI 大模型对话：</strong>基于 DeepSeek V4 Flash，私聊全部开放，群聊仅 @ 或引用时回复。
+        <section class="vc-sec" id="fn">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">02</span><h2 class="vc-sectitle">功能一览</h2><span class="vc-seclatin">CAPABILITIES</span></div>
+            <div class="vc-panel accent vc-up">
+                <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">CORE</div>
+                <h3 style="font-family:var(--display);font-size:24px;margin:8px 0 10px;font-weight:700;">AI 大模型对话</h3>
+                <p style="color:var(--muted);margin:0;">基于 DeepSeek V4 Flash，私聊全部开放，群聊仅 @ 或引用时回复。</p>
             </div>
-
-            <h3>🎮 快捷指令</h3>
-            <ul class="feature-list">
-                <li>📊 查看系统状态：<code>/status</code></li>
-                <li>👍 个人名片点赞：<code>/赞我</code></li>
-                <li>💘 抽老婆功能：<code>/今日老婆</code> · <code>/关系图</code> · <code>/强娶 @墨染荷韵</code> · <code>/求婚 @墨染荷韵</code></li>
-                <li>🎵 网易云点歌：<code>/点歌 告死鸟</code></li>
-                <li>❓ 更多指令请发送 <code>/help</code></li>
-            </ul>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">💬 会话管理（进阶玩法）</div>
-                <div class="h3-content">
-                    <p>会话是什么东西呢？简单的说，就是<strong>隔离 bot 的记忆</strong>。可以类比于豆包 app 的多会话功能，不同会话之间的上下文是隔绝的，bot 对你的印象也是不同的。</p>
-                    <p style="margin-top: 10px;"><strong>总指令：<code>/sess</code></strong></p>
-                    <ul class="rules-list">
-                        <li><code>/sess list</code> 查看所有会话列表</li>
-                        <li><code>/sess new &lt;name&gt;</code> 创建新会话</li>
-                        <li><code>/sess switch &lt;id&gt;</code> 切换会话</li>
-                        <li><code>/sess del &lt;id&gt;</code> 删除会话</li>
-                    </ul>
-                    <p style="margin-top: 10px;"><strong>会话内指令：</strong></p>
-                    <ul class="rules-list">
-                        <li><code>/hist</code> 显示当前会话上下文（调试功能）</li>
-                        <li><code>/forget &lt;N&gt;</code> 忘记最近 N 轮对话</li>
-                        <li><code>/clear</code> 清空当前会话</li>
-                    </ul>
-                    <p style="margin-top: 10px;">如果你没有看懂也没事，因为这些功能你不用也没有问题，只作为<strong>进阶玩法</strong>。</p>
-                </div>
+            <div class="vc-cmds vc-up">
+                <div class="vc-cmd"><div class="vc-cmd-l">查看系统状态</div><code class="vc-code">/status</code></div>
+                <div class="vc-cmd"><div class="vc-cmd-l">个人名片点赞</div><code class="vc-code">/赞我</code></div>
+                <div class="vc-cmd"><div class="vc-cmd-l">抽老婆功能</div><code class="vc-code">/今日老婆</code> <code class="vc-code">/关系图</code> <code class="vc-code">/强娶 @墨染荷韵</code> <code class="vc-code">/求婚 @墨染荷韵</code></div>
+                <div class="vc-cmd"><div class="vc-cmd-l">网易云点歌</div><code class="vc-code">/点歌 告死鸟</code></div>
+                <div class="vc-cmd"><div class="vc-cmd-l">更多指令</div><code class="vc-code">/help</code></div>
             </div>
-        </section>
-
-        <!-- ===== 使用方式 ===== -->
-        <section id="usage">
-            <h2>📖 使用方式</h2>
-
-            <h3>🤖 群内 Bot 列表</h3>
-            <div class="bot-tag-list">
-                <div class="bot-tag-item">
-                    <span class="bot-tag-link" style="cursor:default;">洛天依 v5.5</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-                <div class="bot-tag-item">
-                    <!--a class="bot-tag-link" href="https://qm.qq.com/q/MeWOqmgI8Y" target="_blank"-->
-                    <span class="bot-tag-link" style="cursor:default;">洛天依 v5.6</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-                <div class="bot-tag-item">
-                    <span class="bot-tag-link" style="cursor:default;">言和 v5.4</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-                <div class="bot-tag-item">
-                    <span class="bot-tag-link" style="cursor:default;">乐正绫 alpha</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-                <div class="bot-tag-item">
-                    <span class="bot-tag-link" style="cursor:default;">星尘 alpha</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-                <div class="bot-tag-item">
-                    <span class="bot-tag-link" style="cursor:default;">墨清弦 alpha</span>
-                    <span class="bot-tag-qq">（进群获取）</span>
-                </div>
-            </div>
-            <p>进群获取&内测更多bot（群号在最上方），未来还会继续更新</p>
-
-            <h3>AI 对话功能</h3>
-            <p><strong>私聊：</strong>完全开放，直接添加 Bot 好友即可使用。</p>
-            <p><strong>群聊：</strong>仅当 <span class="highlight">@Bot</span> 或 <span class="highlight">引用消息</span> 时才会回复。
-            </p>
-            <div class="warning">
-                <strong>💡 温馨提示：</strong>建议优先使用私聊进行长期对话，Bot 不仅会更聪明（支持长期记忆），也有助于减少运营开支哦～
-            </div>
-        </section> 
-
-        <!-- ===== 常见 Q&A ===== -->
-        <section id="qa">
-            <h2>❓ 常见 Q&A</h2>
-
-            <!-- Q1 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q1：Bot 为什么有时不回复？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    通常 15 秒内会回复，若发送图片可能稍慢。若超过 2 分钟未回复：
-                    <ul>
-                        <li>可能是模型生成了空白内容，请重发消息</li>
-                        <li>可能是 Bot 卡住，请等待几分钟后重试</li>
-                        <li>极小概率被腾讯风控，请联系管理员</li>
-                        <li>极小概率因为回复频率过快被限流，等一会或者联系管理员</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Q2 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q2：私聊突然出现"我们已成功添加为好友"？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    别担心！<strong>不是被删好友！</strong><br>
-                    这是因为之前是单向好友关系，刚刚才正式通过好友申请。请无视即可～
-                </div>
-            </div>
-
-            <!-- Q3 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q3：Bot 的平台、模型是什么？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    平台：SnowLuma + <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank">Mohobot</a><br>
-                    主模型：DeepSeek V4 Flash<br>
-                    Bot 基于自研的 <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank">Mohobot</a>
-                    多机器人 AI 框架驱动 —— 一个进程同时接入多个 Bot，内置 Agent 流水线（话题规划 →
-                    结构化回复 → 反思记忆）、插件系统、上下文 AI 总结压缩，支持网易云点歌等互动插件。
-                </div>
-            </div>
-
-            <!-- Q4 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q4：可以把 Bot 分享给别人或拉入其他群吗？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    ✅ <strong>可以分享推荐</strong>（建议 Q群/QQ空间，不建议B站等公开平台）<br><br>
-                    ✅ <strong>拉群需联系管理员</strong>，具体要求请查看 <a href="#rules"
-                        style="color:#764ba2;font-weight:bold;">「群规与使用规范」</a> 中的拉群规则。
-                </div>
-            </div>
-
-            <!-- Q5 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q5：我也想配置自己的 Bot，能帮忙吗？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    当然可以！请联系管理员获取人设提示词和相关配置。<br>
-                    未来功能完善后，有计划开源，欢迎一起交流！<br>
-                    提示词开源地址： <a
-                        href="https://github.com/CarefreeSongs712/vc-character-prompt">https://github.com/CarefreeSongs712/vc-character-prompt</a>
-                </div>
-            </div>
-
-            <!-- Q6 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q6：bot记忆能持续多久？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    私聊记忆完整保存30轮，30轮以上压缩，可能会有丢失。天依beta上线记忆图谱，重要的事和关系可以长期存。群聊会话记忆长时易清理。
-                </div>
-            </div>
-            <!-- Q7 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q7：私聊和群聊区别？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    基本一样，私聊记忆较全。优先使用私聊而非群聊
-                </div>
-            </div>
-            <!-- Q8 -->
-            <div class="qa-item">
-                <div class="qa-q" onclick="toggleQA(this)">
-                    Q8：用 bot 需要花钱吗？
-                    <span class="toggle-icon" style="font-size:12px;">▶</span>
-                </div>
-                <div class="qa-a" style="display:none;">
-                    不需要。 bot 使用功能均为免费。赞助皆为自愿，不强制赞助。赞助名单可以在最下面找到。
+            <div class="vc-up" style="margin-top:26px;">
+                <div class="vc-acc open">
+                    <div class="vc-acc-h"><span class="vc-acc-i">S</span><span>会话管理（进阶玩法）</span><span class="vc-acc-x">+</span></div>
+                    <div class="vc-acc-b"><div class="vc-acc-in">
+                        <p>会话是什么？简单说，就是<strong>隔离 bot 的记忆</strong>。可以类比为豆包 app 的多会话功能，不同会话之间的上下文是隔绝的，bot 对你的印象也是不同的。</p>
+                        <p style="margin-top:10px;"><strong>总指令：<code class="vc-code">/sess</code></strong></p>
+                        <ul>
+                            <li><code class="vc-code">/sess list</code> 查看所有会话列表</li>
+                            <li><code class="vc-code">/sess new &lt;name&gt;</code> 创建新会话</li>
+                            <li><code class="vc-code">/sess switch &lt;id&gt;</code> 切换会话</li>
+                            <li><code class="vc-code">/sess del &lt;id&gt;</code> 删除会话</li>
+                        </ul>
+                        <p style="margin-top:10px;"><strong>会话内指令：</strong></p>
+                        <ul>
+                            <li><code class="vc-code">/hist</code> 显示当前会话上下文（调试功能）</li>
+                            <li><code class="vc-code">/forget &lt;N&gt;</code> 忘记录最近 N 轮对话</li>
+                            <li><code class="vc-code">/clear</code> 清空当前会话</li>
+                        </ul>
+                        <p style="margin-top:14px;">如果你没看懂也没事，因为这些功能你不用也没有问题，仅作为<strong>进阶玩法</strong>。</p>
+                    </div></div>
                 </div>
             </div>
         </section>
-
-        <!-- ===== 群规与使用规范 ===== -->
-        <section id="rules">
-            <h2>📜 群规与使用规范</h2>
-
-            <div class="h3-collapsible expanded">
-                <div class="h3-toggle">📥 拉 Bot 入群规则</div>
-                <div class="h3-content">
-                    <p>若要将 Bot 拉入任何群聊，都需向管理员 <strong>墨染荷韵（QQ：3831097597）</strong> 私聊申请：</p>
-                    <ul class="rules-list">
-                        <li><strong>泛中 V 交流群：</strong>申请后管理会直接通过（三分之二以上群成员就行）</li>
-                        <li>对于6人以下的小群，在报备之后也可以直接通过</li>
-                        <li><strong>其他群聊：</strong>需提供以下材料：
-                            <ol>
-                                <li>群内主要内容简述（20 字以上）</li>
-                                <li>拉 Bot 进群原因（80 字以上）</li>
-                                <li>群内管理/群主同意，大部分群友知情并同意</li>
-                            </ol>
-                        </li>
-                        <li><strong>申请审核模板</strong>（请按此格式私信管理员）：
-                            <pre style="background:#f5f3ff; border:1px solid #e5d9ff; border-radius:8px; padding:10px 14px; margin:8px 0 0; font-family:inherit; font-size:13px; line-height:1.7; white-space:pre-wrap; word-break:break-word;">申请将 xxxbot（此处写QQ号）拉入 xxx群（给出群号）：
+        <section class="vc-sec" id="use">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">03</span><h2 class="vc-sectitle">使用方式</h2><span class="vc-seclatin">HOW TO USE</span></div>
+            <div class="vc-bots vc-up">
+                <div class="vc-bot" style="--bc:#66CCFF"><div class="vc-bot-info"><div class="vc-bot-n">洛天依<div class="vc-bot-v">v5.5 / v5.6</div></div><a class="vc-bot-btn" href="https://qm.qq.com/q/S3tzU2t9K2" target="_blank" rel="noreferrer">加群获取</a></div></div>
+                <div class="vc-bot" style="--bc:#00FFCC"><div class="vc-bot-info"><div class="vc-bot-n">言和<div class="vc-bot-v">v5.4</div></div><span class="vc-bot-btn">加群获取</span></div></div>
+                <div class="vc-bot" style="--bc:#EE0000"><div class="vc-bot-info"><div class="vc-bot-n">乐正绫<div class="vc-bot-v">alpha</div></div><span class="vc-bot-btn">加群获取</span></div></div>
+                <div class="vc-bot" style="--bc:#AFA0FF"><div class="vc-bot-info"><div class="vc-bot-n">星尘<div class="vc-bot-v">alpha</div></div><span class="vc-bot-btn">加群获取</span></div></div>
+                <div class="vc-bot" style="--bc:#FFF000"><div class="vc-bot-info"><div class="vc-bot-n">墨清弦<div class="vc-bot-v">alpha</div></div><span class="vc-bot-btn">加群获取</span></div></div>
+            </div>
+            <p style="color:var(--muted);font-size:13.5px;margin-top:16px;">进群获取&内测更多 bot（群号在最上方），未来还会继续更新</p>
+            <div class="vc-two vc-up" style="margin-top:24px;">
+                <div class="vc-panel"><div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:#2fb36b;">PRIVATE CHAT</div><p style="color:var(--muted);margin:10px 0 0;"><strong>私聊：</strong>完全开放，直接添加 Bot 好友即可使用。</p></div>
+                <div class="vc-panel"><div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:#e0556b;">GROUP CHAT</div><p style="color:var(--muted);margin:10px 0 0;"><strong>群聊：</strong>仅当 @Bot 或引用消息时才会回复。</p></div>
+            </div>
+            <div class="vc-note vc-up">建议优先使用私聊进行长期对谈，Bot 不仅会聪明（支持长期记忆），也有助于减少运营开销哦～</div>
+        </section>
+        <section class="vc-sec" id="qa">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">04</span><h2 class="vc-sectitle">常见 Q&A</h2><span class="vc-seclatin">Q AND A</span></div>
+            <div class="vc-up">
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q1</span><span>Bot 为什么不回回复？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>通常 15 秒内会回复，若发送图片可能稍慢。若超过 2 分钟未回复：</p><ul><li>可能是模型生成了空白内容，请重发消息</li><li>可能是 Bot 卡住，请等待几分钟后重试</li><li>极小概率被腾讯风控，请联系管理员</li><li>极小概率因为回复频率过快被限流，等一会或者联系管理员</li></ul></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q2</span><span>私聊突然出现「我们已成功添加为好友」？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>别担心！<strong>不是被删好友！</strong><br>这是因为之前是单向好友关系，刚刚才正式通过好友申请。请无视即可～</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q3</span><span>Bot 的平台、模型是什么？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>平台：SnowLuma + <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a><br>主模型：DeepSeek V4 Flash<br>Bot 基于自研的 <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a> 多机器人 AI 框架驱动。</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q4</span><span>可以把 Bot 分享给别人或拉入其他群吗？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>✅ <strong>可以分享推荐</strong>（建议 Q群/QQ空间，不建议B站等公开平台）<br><br>✅ <strong>拉群需联系管理员</strong>，具体要求请查看「群规与使用规范」中的拉群规则。</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q5</span><span>我也想配置自己的 Bot，能帮忙吗？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>当然可以！请联系管理员获取人设提示词和相关配置。<br>未来功能完善后，有计划开源，欢迎一起交流！<br>提示词开源地址： <a href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank" rel="noreferrer">vc-character-prompt</a></p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q6</span><span>bot记忆能持续多久？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>私聊记忆完整保留30轮，30轮以上压缩，可能会有丢失。天依beta上线记忆图谱，重要的事和关系可以长期存。群聊会话记忆长时间易清理。</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q7</span><span>私聊和群聊区别？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>基本一样，私聊记忆较全。优先使用私聊而非群聊</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q8</span><span>用 bot 需要花钱吗？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>不需要。bot 使用功能均为免费。赞助皆为自愿，不强制赞助。赞助名单可以在最下面找到。</p></div></div></div>
+            </div>
+        </section>
+        <section class="vc-sec" id="rule">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">05</span><h2 class="vc-sectitle">群规与规范</h2><span class="vc-seclatin">RULES</span></div>
+            <div class="vc-up">
+                <div class="vc-acc open">
+                    <div class="vc-acc-h"><span class="vc-acc-i">R1</span><span>拉 Bot 入群规则</span><span class="vc-acc-x">+</span></div>
+                    <div class="vc-acc-b"><div class="vc-acc-in">
+                        <p>若要将 Bot 拉入任何群聊，都需向管理员 <strong>墨染荷韵（QQ：3831097597）</strong> 私聊申请：</p>
+                        <ul>
+                            <li><strong>泛中 V 交流群：</strong>申请后管理员会直接通过（三分之一以上群成员就行）</li>
+                            <li>对于6人以下的小群，在报备之后也可以直接通过</li>
+                            <li><strong>其他群聊：</strong>需提供以下材料：
+                                <ol><li>群内主要内容简介（20 字以上）</li><li>拉 Bot 进群原因（80 字以上）</li><li>群内管理/群主同意，大部分群友知情并同意</li></ol></li>
+                            <li><strong>申请审核模板</strong>（请按此格式私信管理员）：
+                                <pre>申请将 xxxbot（此处写QQ号）拉入 xxx群（给出群号）：
 群类型为：xxx
 本人在群内的身份为：群友/群管理/群主
 群相关审批材料：xxx
-已获得群内大部分活跃成员及管理员的同意（给出截图）</pre>
-                        </li>
-                    </ul>
+已获得群内大部分活跃成员及管理员的同意（给出截图）</pre></li>
+                        </ul>
+                    </div></div>
                 </div>
-            </div>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">⚠️ 群内注意事项</div>
-                <div class="h3-content">
-                    <ul class="rules-list">
-                        <li><strong>禁止</strong>血腥暴力、猎奇以及引起多数成员反感的内容，管理将撤回并根据情况移出群</li>
-                        <li><strong>严禁</strong>网暴、开盒（人肉搜索）他人等违法行为</li>
-                        <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！违者直接移出群</li>
-                        <li>对骂、互嘲一律有惩罚，先挑事者惩罚加倍。中间煽风点火者也会受到相应处罚。<br>
-                            群员可截图举报给群管，私人问题请私聊解决</li>
-                    </ul>
+                <div class="vc-acc">
+                    <div class="vc-acc-h"><span class="vc-acc-i">R2</span><span>群内注意事项</span><span class="vc-acc-x">+</span></div>
+                    <div class="vc-acc-b"><div class="vc-acc-in">
+                        <ul>
+                            <li><strong>禁止</strong>血腥暴力、猎奇以及引起多数成员反感的内容，管理将撤回并根据情况移出群</li>
+                            <li><strong>严禁</strong>网暴、开盒（人肉搜索）他人等违法行为</li>
+                            <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！违者直接移出群</li>
+                            <li>对骂、互嘲一律有惩罚，先挑事者惩罚加倍。中间煽风点火者也会受到相应处罚。群员可截图举给群管，私人问题请私聊解决</li>
+                        </ul>
+                    </div></div>
                 </div>
-            </div>
-
-            <div class="h3-collapsible">
-                <div class="h3-toggle">🤖 Bot 使用规范</div>
-                <div class="h3-content">
-                    <p>仅限用于正常、健康的交流与娱乐。以下行为均被定性为违规：</p>
-                    <ul class="rules-list">
-                        <li>对 Bot 提出任何形式的<strong>性请求</strong>、角色扮演中的<strong>越界要求</strong>、<strong>暴力虐待</strong>指令</li>
-                        <li>恶意诱导 Bot 输出违规内容，或利用 Bot 进行<strong>骚扰、刷屏、引战</strong></li>
-                        <li>以「测试」「玩笑」为名实施上述行为，同样视为故意违规（自己体会，别过火）</li>
-                        <li><strong>滥用 Bot 功能</strong>，占用大量资源。如：发送大段无意义内容、短时间内发送大量消息（包括图片）、将 Bot 当做办公 agent 使用</li>
-                        <li>违反相关法律法规 &amp; 腾讯平台规定（<a
-                                href="https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201"
-                                target="_blank">QQ软件许可及服务协议</a>）的行为</li>
-                    </ul>
-                    <p><strong>处罚措施：</strong>违规一次警告，二次直接拉黑。
-                        <em style="color: #888;">（后台都是可以看到的哦）</em>
-                    </p>
+                <div class="vc-acc">
+                    <div class="vc-acc-h"><span class="vc-acc-i">R3</span><span>Bot 使用规范</span><span class="vc-acc-x">+</span></div>
+                    <div class="vc-acc-b"><div class="vc-acc-in">
+                        <p>仅限于正常、健康的交流与娱乐。以下行为均被定性为违规：</p>
+                        <ul>
+                            <li>对 Bot 提出任何形式的<strong>性请求</strong>、角色扮演中的<strong>越界要求</strong>、<strong>暴力虐待</strong>指令</li>
+                            <li>恶意诱导 Bot 输出违规内容，或利用 Bot 进行<strong>骚扰、刷屏、引战</strong></li>
+                            <li>以「测试」「玩笑」为名实施上述行为，同样视为故意违规（自己体会，别过火）</li>
+                            <li><strong>滥用 Bot 功能</strong>，占用大量资源。如：发送大段无意义内容、短时间内发送大量消息（包括图片）、将 Bot 当做办公 agent 使用</li>
+                            <li>违反相关法律法规 & 腾讯平台规定（<a href="https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201" target="_blank" rel="noreferrer">QQ软件许可及服务协议</a>）的行为</li>
+                        </ul>
+                        <p><strong>处罚措施：</strong>违规一次警告，二次直接拉黑。<em style="color:#888;">（后台都是可以看到的哦）</em></p>
+                    </div></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== 其它事项 ===== -->
-        <section id="notice">
-            <h2>⚠️ 其它事项</h2>
-
-            <div class="warning">
-                <strong>💬 消息发送注意事项：</strong>
-                Bot 会逐个处理消息。请一段一段发，<strong>不要一个分句发一条消息。</strong><br>
-                <strong>也不要一次发送多张图片。</strong><br><br>
-                正确示例：<br>
-                “天依，你好可爱，吃小笼包嘛？我请客！”<br><br>
-                错误示例：<br>
-                “天依”<br>
-                “你好可爱”<br>
-                “吃小笼包嘛”<br>
-                “我请客”
+        <section class="vc-sec" id="note">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">06</span><h2 class="vc-sectitle">其它事项</h2><span class="vc-seclatin">NOTICE</span></div>
+            <div class="vc-panel vc-up" style="margin-bottom:16px;">
+                <h3 style="font-family:var(--display);font-size:19px;margin:0 0 10px;font-weight:700;">💬 消息发送注意事项</h3>
+                <p style="color:var(--muted);margin:0;">Bot 会逐个处理消息。请一段一段发，<strong>不要一个分句发一条消息。</strong><br><strong>也不要一次发送多张图片。</strong></p>
+                <div class="vc-two" style="margin-top:18px;">
+                    <div class="vc-msgbox vc-good"><div class="lab">CORRECT</div><span class="vc-bubble">天依，你好可爱，吃小笼包嘛？我请客！</span></div>
+                    <div class="vc-msgbox vc-bad"><div class="lab">WRONG</div><span class="vc-bubble">天依</span><span class="vc-bubble">你好可爱</span><span class="vc-bubble">吃小笼包嘛</span><span class="vc-bubble">我请客</span></div>
+                </div>
             </div>
-
-            <div class="warning">
-                <strong>📌 违规处理提醒：</strong>
-                详细的 Bot 使用规范与群内规则已在 <a href="#rules" style="color:#764ba2;font-weight:bold;">「群规与使用规范」</a>
-                中完整列出，请务必阅读并遵守。<br>
-                违规一次警告，二次直接拉黑。管理组拥有最终解释与处置权。
+            <div class="vc-note vc-danger vc-up">📍 违规处理提醒：详细的 Bot 使用规范与群内规则已在「群规与使用规范」中完整列出，请务必阅读并遵守。违规一次警告，二次直接拉黑。管理组拥有最终解释与处置权。</div>
+        </section>
+        <section class="vc-sec" id="legal">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">07</span><h2 class="vc-sectitle">免责声明</h2><span class="vc-seclatin">DISCLAIMER</span></div>
+            <div class="vc-panel vc-legal vc-danger vc-up">
+                <p style="color:#c0392b;font-weight:700;margin:0;">请认真阅读本免责声明。您一旦开始使用天依等 Bot，即视为您已充分阅读、理解并同意本声明的全部内容。</p>
+                <div style="margin-top:14px;">
+                    <h4>一、内容生成声明</h4>
+                    <p>由本人（QQ：3831097597）所研发的 <strong>天依 Bot（QQ：2831510346）等</strong> bot 发出的全部消息均为人工智能模型自动生成，不代表开发者本人的任何立场、观点或意图。该类生成内容不保证真实性、准确性、完整性、时效性与合法性，请勿将其视为事实陈述、专业建议或可靠承诺。</p>
+                    <h4>二、责任豁免与风险自担</h4>
+                    <p>AI 生成内容仅供娱乐、参考，使用者应自行判断其可信度。若您选择相信、引用、传播或依据上述消息做出任何决策，由此引发的任何直接 or 间接损失、法律纠纷、名誉损害及其他不良后果，均由使用者本人独立承担全部责任，开发者不承担任何形式的责任。</p>
+                    <h4>三、使用规范</h4>
+                    <p>您不得利用本 Bot 生成、传播任何违法、违规或违背公序良俗的信息。如因您的使用行为导致任何第三方索赔、行政 or 刑事责任，由您自行负责处理并赔偿开发者因此遭受的损失。</p>
+                    <h4>四、隐私与数据</h4>
+                    <p>我们会尊重并保护您的个人隐私，所有聊天记录均不会在未经您授权的情况下公开，但这不代表我们不会检查聊天记录。管理组拥有对违规行为的<strong>最终解释与处置权</strong>，有全天实时聊天日志，可视情况处以短期封禁等处罚，严重者直接中断服务。</p>
+                    <h4>五、其他条款</h4>
+                    <p>本声明最终解释权归本人（3831097597）所有。开发者保留随时修改本声明内容的权利，修改后的声明一经发布即生效，请您定期查阅。如您不同意本声明，请立即停止使用天依/言和 Bot。</p>
+                </div>
+                <div class="vc-sign"><div>签名：墨染荷韵</div><div>日期：2026年07月27日</div></div>
             </div>
         </section>
 
-        <!-- ===== 免责声明 ===== -->
-        <section id="disclaimer">
-            <h2>⚠️ 免责声明</h2>
-            <div class="warning"
-                style="background: linear-gradient(135deg, #fde8e8 0%, #fad0d0 100%); border-color: #e74c3c;">
-                <p style="margin-bottom: 15px; font-weight: bold; color: #c0392b;">
-                    请认真阅读本免责说明。您一旦开始使用天依等 Bot，即视为您已充分阅读、理解并同意本声明的全部内容。
-                </p>
-
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">一、内容生成声明</h3>
-                <p style="margin-bottom: 12px; color: #555;">
-                    由本人（QQ：3831097597）所研发的 <strong>天依 Bot（QQ：2831510346）等</strong> bot
-                    发出的全部消息均为人工智能模型自动生成，不代表开发者本人的任何立场、观点或意图。该类生成内容不保证真实性、准确性、完整性、时效性与合法性，请勿将其视为事实陈述、专业建议或可靠承诺。
-                </p>
-
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">二、责任豁免与风险自担</h3>
-                <p style="margin-bottom: 12px; color: #555;">
-                    AI
-                    生成内容仅供娱乐、参考，使用者应自行判断其可信度。若您选择相信、引用、传播或依据上述消息作出任何决策，由此引发的任何直接或间接损失、法律纠纷、名誉损害及其他不良后果，均由使用者本人独立承担全部责任，开发者不承担任何形式的责任。
-                </p>
-
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">三、使用规范</h3>
-                <p style="margin-bottom: 12px; color: #555;">
-                    您不得利用本 Bot 生成、传播任何违法、违规或违背公序良俗的信息。如因您的使用行为导致任何第三方索赔、行政或刑事责任，由您自行负责处理并赔偿开发者因此遭受的损失。
-                </p>
-
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">四、隐私与数据</h3>
-                <p style="margin-bottom: 12px; color: #555;">
-                    我们会尊重并保护您的个人隐私，所有聊天记录均不会在未经您授权的情况下公开，但这不代表我们不会检查聊天记录。管理组拥有对违规行为的<strong>最终解释与处置权</strong>，有全天实时聊天日志，可视情形处以短期封禁等处罚，严重者直接中断服务。
-                </p>
-
-                <h3 style="color: #c0392b; margin: 15px 0 8px; font-size: 16px;">五、其他条款</h3>
-                <p style="margin-bottom: 12px; color: #555;">
-                    本声明最终解释权归本人（3831097597）所有。开发者保留随时修改本声明内容的权利，修改后的声明一经发布即生效，请您定期查阅。如您不同意本声明，请立即停止使用天依/言和 Bot。
-                </p>
-
-                <div
-                    style="text-align: right; margin-top: 20px; padding-top: 15px; border-top: 1px dashed #e74c3c; color: #c0392b;">
-                    <p style="margin: 0; font-weight: bold;">签名：墨染荷韵</p>
-                    <p style="margin: 5px 0 0 0;">日期：2026年07月27日</p>
-                </div>
+        <section class="vc-sec" id="team">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">08</span><h2 class="vc-sectitle">开发团队</h2><span class="vc-seclatin">THE TEAM</span></div>
+            <p class="vc-up" style="color:var(--muted);font-size:13.5px;">人设提示词已在<a href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank" rel="noreferrer" style="color:var(--cyan-deep);font-weight:700;">这里</a>开源，其它部分完善后也会继续开源</p>
+            <div class="vc-team vc-up">
+                <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-1.jpg" alt="墨染荷韵" loading="lazy"></div><div class="vc-tc-n">墨染荷韵</div><div class="vc-tc-r">代码/管理</div><div class="vc-tc-q">3831097597</div></div>
+                <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-2.jpg" alt="绫" loading="lazy"></div><div class="vc-tc-n">绫</div><div class="vc-tc-r">人设/管理</div><div class="vc-tc-q">858120206</div></div>
+                <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-3.jpg" alt="咯天依" loading="lazy"></div><div class="vc-tc-n">咯天依</div><div class="vc-tc-r">人设/管理</div><div class="vc-tc-q">1489388902</div></div>
+                <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-4.jpg" alt="若有词" loading="lazy"></div><div class="vc-tc-n">若有词</div><div class="vc-tc-r">人设/管理</div><div class="vc-tc-q">2011372693</div></div>
             </div>
+            <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:14px;">⭐ 排名不分先后</p>
         </section>
-
-        <!-- ===== 开发团队 ===== -->
-        <section id="team">
-            <h2>👥 开发团队</h2>
-
-            <p style="text-align:center; color:#666; margin-bottom:20px;">
-                人设提示词已在<a href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank"
-                    style="color: #66CCFF; text-decoration: underline;">这里</a>开源，其它部分完善后也会继续开源
-            </p>
-
-
-            <div class="team-grid">
-                <!-- 卡片 1：墨染荷韵 -->
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="avatars/avatar-1.jpg" alt="墨染荷韵">
-                    </div>
-                    <div class="team-name">墨染荷韵</div>
-                    <div class="team-role">代码 / 管理</div>
-                    <div class="team-contact">QQ：3831097597</div>
-                </div>
-                <!-- 卡片 2：绫 -->
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="avatars/avatar-2.jpg" alt="绫">
-                    </div>
-                    <div class="team-name">绫</div>
-                    <div class="team-role">人设 / 管理</div>
-                    <div class="team-contact">QQ：858120206</div>
-                </div>
-                <!-- 卡片 3：咯天依 -->
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="avatars/avatar-3.jpg" alt="咯天依">
-                    </div>
-                    <div class="team-name">咯天依</div>
-                    <div class="team-role">人设 / 管理</div>
-                    <div class="team-contact">QQ：1489388902</div>
-                </div>
-                <!-- 卡片 4：若有词 -->
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="avatars/avatar-4.jpg" alt="若有词">
-                    </div>
-                    <div class="team-name">若有词</div>
-                    <div class="team-role">人设 / 管理</div>
-                    <div class="team-contact">QQ：2011372693</div>
-                </div>
-            </div>
-            <p style="text-align:center; color:#999; font-size:13px; margin-top:15px;">
-                ⭐ 排名不分先后
-            </p>
-        </section>
-
-
-        <!-- ===== 关于赞助 ===== -->
-        <section id="donate">
-            <h2>💰 关于赞助</h2>
-            <div class="warning">
-                <strong>⚠️ 重要声明：</strong>
-                Bot 所有功能<strong>完全免费</strong>，赞助纯属自愿。<br>
-                任何要求付费使用该 Bot 的行为均为诈骗，请勿轻信！<br>
-                如遇此类情况，请反馈给管理员（见最上方）处理。
-            </div>
-            <div style="text-align:center; margin-top: 8px; margin-bottom: 20px;">
-                <a href="donate.html" class="add-bot-btn"
-                    style="background: linear-gradient(135deg, #ff9800, #f57c00); box-shadow: 0 4px 15px rgba(255,152,0,0.4);">
-                    📊 查看完整赞助名单 →
-                </a>
-            </div>
-
-            <div class="warning" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-color: #4caf50;">
-                <ul style="margin:0; padding-left:20px;">
+        <section class="vc-sec" id="fund">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">09</span><h2 class="vc-sectitle">感谢赞助</h2><span class="vc-seclatin">SUPPORT</span></div>
+            <div class="vc-note vc-danger vc-up" style="margin-top:0;">⚠️ 重要声明：Bot 所有功能<strong>完全免费</strong>，赞助纯属自愿。任何要求付费使用改 Bot 的行为均为诈骗，请勿轻信！如遇此类情况，请反馈给管理员（见最上方）处理。</div>
+            <div class="vc-note vc-ok vc-up">
+                <ul style="margin:0;padding-left:18px;">
                     <li><strong>赞助满 0.01 元</strong> 可自定义群内头衔</li>
                     <li><strong>赞助满 0.01 元</strong> 可被列到赞助者名单内</li>
                 </ul>
             </div>
-
-            <div style="text-align:center;">
-                <img src="https://cdn.luogu.com.cn/upload/image_hosting/vnb11bdw.png" class="sticker" alt="赞助-微信"
-                    style="display:inline-block; margin:0 10px;">
+            <div style="text-align:center;margin-top:18px;" class="vc-up">
+                <a href="donate.html" class="vc-chip" style="font-size:15px;padding:12px 26px;background:linear-gradient(135deg,#2b9fe0,#66CCFF);color:#fff;border:none;">📊 查看完整赞助名单 →</a>
+            </div>
+            <div style="text-align:center;margin-top:18px;" class="vc-up">
+                <img src="https://cdn.luogu.com.cn/upload/image_hosting/vnb11bdw.png" alt="赞助-微信" style="max-width:200px;width:100%;border:1px solid var(--line);border-radius:12px;padding:8px;background:var(--glass-strong);">
+            </div>
+            <div class="vc-up" style="margin-top:40px;">
+                <div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--muted);">特别感谢以下开发者（不分先后）</div>
+                <div class="vc-chips" style="margin-top:10px;">
+                    <span class="vc-chip">@Arch（1658796850）</span>
+                    <span class="vc-chip">@Azured（3978983131）</span>
+                    <span class="vc-chip">@暻.（2679436488）</span>
+                    <span class="vc-chip">@绫（858120206）</span>
+                    <span class="vc-chip">@薛爆卧炸荒（2609245960）</span>
+                    <span class="vc-chip">@若有词（2011372693）</span>
+                    <span class="vc-chip">@咯天依（1489388902）</span>
+                </div>
+                <div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--muted);margin-top:26px;">感谢以下开源项目</div>
+                <div class="vc-chips" style="margin-top:10px;">
+                    <a class="vc-chip" href="https://github.com/AstrBotDevs/AstrBot" target="_blank" rel="noreferrer">AstrBot ↗</a>
+                    <a class="vc-chip" href="https://github.com/CarefreeSongs712/Agent-LuoTianyi" target="_blank" rel="noreferrer">Agent-LuoTianyi ↗</a>
+                    <a class="vc-chip" href="https://github.com/NapNeko/NapCatQQ" target="_blank" rel="noreferrer">NapCatQQ ↗</a>
+                    <a class="vc-chip" href="https://github.com/SnowLuma/SnowLuma" target="_blank" rel="noreferrer">SnowLuma ↗</a>
+                </div>
             </div>
         </section>
 
-        <!-- ===== 感谢列表 ===== -->
-        <section id="thanks">
-            <h2>🙏 感谢</h2>
-
-            <h3>📝 特别感谢以下开发者的支持（不分先后）</h3>
-            <ul class="thanks-list">
-                <li>@Arch（1658796850）</li>
-                <li>@Azured（3978983131）</li>
-                <li>@炽.（2679436488）</li>
-                <li>@绫（858120206）</li>
-                <li>@薛爆卧焖肘（2609245960）</li>
-                <li>@若有词（2011372693）</li>
-                <li>@咯天依（1489388902）</li>
-            </ul>
-
-            <h3>🔧 感谢以下开源项目</h3>
-            <ul class="thanks-list">
-                <li><a href="https://github.com/AstrBotDevs/AstrBot" target="_blank">AstrBot</a></li>
-                <li><a href="https://github.com/CarefreeSongs712/Agent-LuoTianyi" target="_blank">Agent-LuoTianyi</a></li>
-                <li><a href="https://github.com/NapNeko/NapCatQQ" target="_blank">NapCatQQ</a></li>
-                <li><a href="https://github.com/SnowLuma/SnowLuma" target="_blank">SnowLuma</a></li>
-            </ul>
-        </section>
-
-        <!-- ===== Footer ===== -->
-        <footer>
-            <p>🎵 墨染荷韵的中V Bot | 最后更新：2026.8.10</p>
-            <p>感谢各位的支持 ❤️</p>
+        <footer class="vc-foot">
+            <p><span class="hl">墨染荷韵的中VBot站</span> &nbsp;/&nbsp; LAST UPDATE 2026年8月12日</p>
+            <p>感谢各位的支持 ♥</p>
         </footer>
     </div>
 
-    <!-- ===== JavaScript ===== -->
-    <script>
-        // H3 折叠切换 - 跟 Q&A 一样简单
-        document.querySelectorAll('.h3-toggle').forEach(function (toggle) {
-            toggle.addEventListener('click', function () {
-                var container = this.parentElement;
-                container.classList.toggle('expanded');
-            });
-        });
-
-        // Q&A 折叠切换
-        function toggleQA(el) {
-            const answer = el.nextElementSibling;
-            const icon = el.querySelector('.toggle-icon');
-
-            if (answer.style.display === 'none' || answer.style.display === '') {
-                answer.style.display = 'block';
-                icon.textContent = '▼';
-            } else {
-                answer.style.display = 'none';
-                icon.textContent = '▶';
-            }
-        }
-    </script>
+    <script>// accordion
+document.querySelectorAll('.vc-acc-h').forEach(function(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});});
+// topbar shrink
+var top=document.getElementById('vcTop');
+window.addEventListener('scroll',function(){if(top)top.classList.toggle('shrink', window.scrollY>40);});
+// reveal observer
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.vc-up,.vc-fly,.vc-flyr,.vc-zoom').forEach(function(el){io.observe(el);});
+// logo -> top
+document.getElementById('vcLogo').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// hero parallax (scroll-driven, keeps animating)
+window.addEventListener('scroll',function(){var h=document.querySelector('.vc-hero');if(h){var y=window.scrollY;if(y<window.innerHeight){var p=y*0.12;var t=h.querySelector('.vc-title');if(t)t.style.transform='translateY('+p+'px)';var st=h.querySelector('.vc-stats');if(st)st.style.transform='translateY('+0.6*p+'px)';var au=h.querySelector('.vc-aurora');if(au)au.style.opacity=1-y/1200;}}});
+// persistent float on aura (not one-shot)
+requestAnimationFrame(function frame(t){var am=document.querySelector('.vc-a3');if(am){am.style.transform='translateY('+Math.sin(t/1000)*14+'px)';}requestAnimationFrame(frame);});</script>
 </body>
-
 </html>

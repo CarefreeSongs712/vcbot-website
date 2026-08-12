@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@300;400;500&family=Chakra+Petch:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css">
 </head>
-<body><div class="vc-top" id="vcTop"><div class="logo">墨染<b>荷韵</b> · 中V Bot</div><button class="tb-burger" id="vcBurger" aria-label="menu">☰</button><nav><a href="#log">日志</a><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
+<body><div class="vc-top" id="vcTop"><div class="logo" id="vcLogo" style="cursor:pointer">墨染<b>荷韵</b> · 中V Bot</div><nav><a href="#log">日志</a><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
     <div class="vc-bg">
         <div class="vc-aurora vc-a1"></div>
         <div class="vc-aurora vc-a2"></div>
@@ -282,10 +282,8 @@ window.addEventListener('scroll',function(){if(top)top.classList.toggle('shrink'
 // reveal observer
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.vc-up,.vc-fly,.vc-flyr,.vc-zoom').forEach(function(el){io.observe(el);});
-// topbar burger toggle
-var burger=document.getElementById('vcBurger');
-var nav=document.querySelector('.vc-top nav');
-if(burger&&nav){burger.addEventListener('click',function(){nav.classList.toggle('collapsed');});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.add('collapsed');});});}
+// logo -> top
+document.getElementById('vcLogo').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 // hero parallax (scroll-driven, keeps animating)
 window.addEventListener('scroll',function(){var h=document.querySelector('.vc-hero');if(h){var y=window.scrollY;if(y<window.innerHeight){var p=y*0.12;var t=h.querySelector('.vc-title');if(t)t.style.transform='translateY('+p+'px)';var st=h.querySelector('.vc-stats');if(st)st.style.transform='translateY('+0.6*p+'px)';var au=h.querySelector('.vc-aurora');if(au)au.style.opacity=1-y/1200;}}});
 // persistent float on aura (not one-shot)

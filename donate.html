@@ -27,6 +27,7 @@
 .donation-pagination button.active { background:linear-gradient(135deg,var(--cyan-deep),var(--cyan)); color:#fff; border-color:transparent; }
 .loading { color:var(--muted); font-size:14px; }
 .err-box { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; color:var(--muted); }
+.error-state{background:var(--glass);border:1px solid var(--glass-bd);border-radius:14px;padding:18px;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -34,19 +35,19 @@
 <div class="vc-bgimg"></div>
 <div class="vc-top" id="vcTop"><div class="logo" id="vcLogo">墨染<b>荷韵</b> · 中V Bot</div><nav><a href="index.html">← 返回主页</a></nav></div>
 <main class="vc-wrap">
-<header class="vc-hero-banner vc-up">
+<header class="vc-hero-banner">
 <div class="vc-kicker"><span>SUPPORT US</span><span>DONATION</span></div>
 <h1 class="vc-title vc-zoom">💰 捐赠信息</h1>
 <p class="vc-sub vc-fly d1">感谢每一位支持者的慷慨赞助 ♥ 数据来自 donate.txt，不定期更新。</p>
 </header>
 
 
-<section class="vc-sec vc-up">
+<section class="vc-sec">
 <div class="vc-sechead"><span class="vc-secnum">01</span><h2 class="vc-sectitle">月度统计</h2><span class="vc-seclatin">MONTHLY</span></div>
 <div id="monthly-container"><p class="loading">加载中...</p></div>
 </section>
 
-<section class="vc-sec vc-up">
+<section class="vc-sec">
 <div class="vc-sechead"><span class="vc-secnum">02</span><h2 class="vc-sectitle">捐赠列表</h2><span class="vc-seclatin">RECORDS</span></div>
 <div id="donation-container"><p class="loading">加载中...</p></div>
 </section>

@@ -28,6 +28,8 @@
 .loading { color:var(--muted); font-size:14px; }
 .err-box { background:var(--glass); border:1px solid var(--glass-bd); border-radius:14px; padding:18px; color:var(--muted); }
 .error-state{background:var(--glass);border:1px solid var(--glass-bd);border-radius:14px;padding:18px;color:var(--muted);}
+
+.vc-sec{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-bd);border-radius:var(--radius);padding:22px 24px;margin-bottom:24px;box-shadow:var(--shadow);}
 </style>
 </head>
 <body>
@@ -287,7 +289,7 @@
             let html = '<div class="pagination">';
             html += `<button class="page-nav" data-page="${current - 1}" ${current <= 1 ? 'disabled' : ''}>‹ 上一页</button>`;
 
-            const maxVisible = 7;
+            const vw = window.innerWidth || 800; let maxVisible = vw < 560 ? 3 : (vw < 900 ? 5 : 7);
             let startP = Math.max(1, current - Math.floor(maxVisible / 2));
             let endP = Math.min(totalPages, startP + maxVisible - 1);
             if (endP - startP + 1 < maxVisible) {
@@ -329,6 +331,7 @@
                     allEntries = parseDonateData(data);
                     renderMonthlyTable(allEntries);
                     renderDonationPage(1);
+        window.addEventListener('resize', function(){ renderDonationPage(currentPage); });
                 })
                 .catch(err => {
                     console.error('加载捐赠数据失败:', err);

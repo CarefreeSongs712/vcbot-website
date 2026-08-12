@@ -114,7 +114,7 @@ body {
 #use .vc-bot,
 #use .vc-panel,
 #use .vc-note {
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.1);
   -webkit-backdrop-filter:blur(10px) saturate(180%);
   backdrop-filter:blur(10px) saturate(180%);
 }

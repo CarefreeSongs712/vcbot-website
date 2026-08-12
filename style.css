@@ -43,7 +43,7 @@ html { scroll-behavior:smooth; }
 body { scroll-snap-type:y proximity; }
 
 /* ===== hero (flyme poster style) ===== */
-.vc-hero { background:var(--glass); backdrop-filter:blur(16px); border:1px solid var(--glass-bd); border-radius:28px; padding:42px 44px; box-shadow:var(--shadow); margin:0; overflow:hidden; position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
+.vc-hero { background:rgba(255,255,255,0.42); backdrop-filter:blur(22px) saturate(160%); -webkit-backdrop-filter:blur(22px) saturate(160%); border:1px solid rgba(102,204,255,0.55); box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,0.6); border-radius:28px; padding:42px 44px; box-shadow:var(--shadow); margin:0; overflow:hidden; position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
 .vc-hero .prx { will-change:transform; }
 .vc-kicker { display:flex; gap:16px; font-family:var(--mono); font-size:11px; letter-spacing:.22em; color:var(--cyan-deep); margin-bottom:18px; }
 .vc-hero-grid { display:grid; grid-template-columns:1.4fr .9fr; gap:30px; align-items:center; }

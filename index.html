@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@300;400;500&family=Chakra+Petch:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css">
 </head>
-<body><div class="vc-top" id="vcTop"><div class="logo">墨染<b>荷韵</b> · 中V Bot</div><nav><a href="#log">日志</a><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
+<body><div class="vc-top" id="vcTop"><div class="logo">墨染<b>荷韵</b> · 中V Bot</div><button class="tb-burger" id="vcBurger" aria-label="menu">☰</button><nav><a href="#log">日志</a><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
     <div class="vc-bg">
         <div class="vc-aurora vc-a1"></div>
         <div class="vc-aurora vc-a2"></div>
@@ -20,18 +20,6 @@
     </div>
     <div class="vc-grain"></div>
     <div class="vc-bgimg"></div>
-
-    <nav class="vc-rail">
-        <a href="#log" class="on"><span class="n">01</span><span class="t">更新日志</span></a>
-        <a href="#fn"><span class="n">02</span><span class="t">功能一览</span></a>
-        <a href="#use"><span class="n">03</span><span class="t">使用方式</span></a>
-        <a href="#qa"><span class="n">04</span><span class="t">常见Q&A</span></a>
-        <a href="#rule"><span class="n">05</span><span class="t">群规规范</span></a>
-        <a href="#note"><span class="n">06</span><span class="t">其它事项</span></a>
-        <a href="#legal"><span class="n">07</span><span class="t">免责声明</span></a>
-        <a href="#team"><span class="n">08</span><span class="t">开发团队</span></a>
-        <a href="#fund"><span class="n">09</span><span class="t">感谢赞助</span></a>
-    </nav>
 
     <div class="vc-wrap">
         <header class="vc-hero vc-up prx">
@@ -127,10 +115,10 @@
             <div class="vc-sechead vc-up"><span class="vc-secnum">03</span><h2 class="vc-sectitle">使用方式</h2><span class="vc-seclatin">HOW TO USE</span></div>
             <div class="vc-bots vc-up">
                 <div class="vc-bot"><div class="vc-bot-halo" style="background:#66CCFF;"></div><div class="vc-bot-n" style="color:#2b9fe0;">洛天依</div><div class="vc-bot-v">v5.5 / v5.6</div><div class="vc-bot-note">进群获取</div></div>
-                <div class="vc-bot"><div class="vc-bot-halo" style="background:#ff9ecb;"></div><div class="vc-bot-n" style="color:#e0556b;">言和</div><div class="vc-bot-v">v5.4</div><div class="vc-bot-note">进群获取</div></div>
-                <div class="vc-bot"><div class="vc-bot-halo" style="background:#9be8a0;"></div><div class="vc-bot-n" style="color:#2f9e44;">乐正绫</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
-                <div class="vc-bot"><div class="vc-bot-halo" style="background:#c4a7ff;"></div><div class="vc-bot-n" style="color:#7b5cff;">星尘</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
-                <div class="vc-bot"><div class="vc-bot-halo" style="background:#aee7ff;"></div><div class="vc-bot-n" style="color:#2b9fe0;">墨清弦</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
+                <div class="vc-bot"><div class="vc-bot-halo" style="background:#00FFCC;"></div><div class="vc-bot-n" style="color:#00b894;">言和</div><div class="vc-bot-v">v5.4</div><div class="vc-bot-note">进群获取</div></div>
+                <div class="vc-bot"><div class="vc-bot-halo" style="background:#EE0000;"></div><div class="vc-bot-n" style="color:#c0392b;">乐正绫</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
+                <div class="vc-bot"><div class="vc-bot-halo" style="background:#AFA0FF;"></div><div class="vc-bot-n" style="color:#7b5cff;">星尘</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
+                <div class="vc-bot"><div class="vc-bot-halo" style="background:#FFF000;"></div><div class="vc-bot-n" style="color:#b3a000;">墨清弦</div><div class="vc-bot-v">alpha</div><div class="vc-bot-note">进群获取</div></div>
             </div>
             <p style="color:var(--muted);font-size:13.5px;margin-top:16px;">进群获取&内测更多 bot（群号在最上方），未来还会继续更新</p>
             <div class="vc-two vc-up" style="margin-top:24px;">
@@ -294,11 +282,10 @@ window.addEventListener('scroll',function(){if(top)top.classList.toggle('shrink'
 // reveal observer
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.vc-up,.vc-fly,.vc-flyr,.vc-zoom').forEach(function(el){io.observe(el);});
-// rail active
-var rails=Array.prototype.slice.call(document.querySelectorAll('.vc-rail a'));
-var ids=['log','fn','use','qa','rule','note','legal','team','fund'];
-var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;rails.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id);});}});},{rootMargin:'-45% 0px -50% 0px'});
-ids.forEach(function(id){var el=document.getElementById(id);if(el)ro.observe(el);});
+// topbar burger toggle
+var burger=document.getElementById('vcBurger');
+var nav=document.querySelector('.vc-top nav');
+if(burger&&nav){burger.addEventListener('click',function(){nav.classList.toggle('collapsed');});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.add('collapsed');});});}
 // hero parallax (scroll-driven, keeps animating)
 window.addEventListener('scroll',function(){var h=document.querySelector('.vc-hero');if(h){var y=window.scrollY;if(y<window.innerHeight){var p=y*0.12;var t=h.querySelector('.vc-title');if(t)t.style.transform='translateY('+p+'px)';var st=h.querySelector('.vc-stats');if(st)st.style.transform='translateY('+0.6*p+'px)';var au=h.querySelector('.vc-aurora');if(au)au.style.opacity=1-y/1200;}}});
 // persistent float on aura (not one-shot)

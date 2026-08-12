@@ -37,17 +37,12 @@ body {
 .vc-top .tb-btn { font-family:var(--mono); font-size:12px; padding:7px 16px; border-radius:999px; background:linear-gradient(135deg,var(--cyan-deep),var(--cyan)); color:#fff; text-decoration:none; font-weight:700; white-space:nowrap; }
 
 /* ===== layout ===== */
-.vc-rail { position:fixed; left:22px; top:50%; transform:translateY(-50%); z-index:20; display:flex; flex-direction:column; gap:4px; padding:14px 10px; background:var(--glass); backdrop-filter:blur(14px); border:1px solid var(--glass-bd); border-radius:16px; box-shadow:var(--shadow); }
-.vc-rail a { display:flex; align-items:center; gap:10px; padding:7px 10px; border-radius:10px; text-decoration:none; color:var(--muted); transition:all .25s; font-size:13px; }
-.vc-rail a .n { font-family:var(--mono); font-size:11px; color:var(--cyan); opacity:.7; }
-.vc-rail a .t { font-weight:600; white-space:nowrap; }
-.vc-rail a:hover { background:rgba(102,204,255,.16); color:var(--cyan-ink); }
-.vc-rail a.on { background:linear-gradient(135deg,var(--cyan-deep),var(--cyan)); color:#fff; }
-.vc-rail a.on .n { color:#fff; opacity:.9; }
-.vc-wrap { max-width:920px; margin:0 auto; padding:96px 26px 80px; position:relative; z-index:1; }
+.vc-wrap { max-width:1100px; margin:0 auto; padding:0; position:relative; z-index:1; scroll-snap-type:y mandatory; }
+html { scroll-behavior:smooth; }
+body { scroll-snap-type:y proximity; }
 
 /* ===== hero (flyme poster style) ===== */
-.vc-hero { background:var(--glass); backdrop-filter:blur(16px); border:1px solid var(--glass-bd); border-radius:28px; padding:42px 44px; box-shadow:var(--shadow); margin-bottom:34px; overflow:hidden; position:relative; }
+.vc-hero { background:var(--glass); backdrop-filter:blur(16px); border:1px solid var(--glass-bd); border-radius:28px; padding:42px 44px; box-shadow:var(--shadow); margin:0; overflow:hidden; position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
 .vc-hero .prx { will-change:transform; }
 .vc-kicker { display:flex; gap:16px; font-family:var(--mono); font-size:11px; letter-spacing:.22em; color:var(--cyan-deep); margin-bottom:18px; }
 .vc-hero-grid { display:grid; grid-template-columns:1.4fr .9fr; gap:30px; align-items:center; }
@@ -146,3 +141,21 @@ body {
 /* background image layer (art-9), transparent */
 .vc-bgimg{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:url('site-data/img/art-9.jpg');background-size:cover;background-position:center;opacity:0.35;}
 @media (max-width:768px){.vc-bgimg{background-attachment:scroll;}}
+
+
+/* ===== fullscreen snap sections ===== */
+.vc-sec { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:90px 26px 60px; scroll-snap-align:start; box-sizing:border-box; }
+.vc-sechead { flex-shrink:0; }
+
+/* official vSinger accent on bot cards */
+.vc-bot { border-width:1.5px; }
+.vc-bot-n { letter-spacing:.02em; }
+
+/* topbar hamburger (mobile) */
+.vc-top .tb-burger { display:none; margin-left:auto; background:none; border:1px solid var(--glass-bd); border-radius:10px; padding:6px 12px; font-size:18px; color:var(--cyan-deep); cursor:pointer; }
+.vc-top nav.collapsed { display:none; }
+@media (max-width:900px){
+  .vc-top nav { display:flex; position:fixed; top:54px; left:0; right:0; flex-direction:column; gap:4px; padding:12px 20px; background:rgba(255,255,255,0.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--glass-bd); }
+  .vc-top nav:not(.collapsed){ display:flex; }
+  .vc-top .tb-burger { display:block; }
+}

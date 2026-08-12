@@ -110,3 +110,12 @@ body {
   .pagination .page-info { display:none; }
   .pagination { gap:10px; }
 }
+/* 3.使用方法 卡片：透明度90% 高斯模糊10% */
+#use .vc-bot,
+#use .vc-panel,
+#use .vc-note {
+  background:rgba(255,255,255,0.9);
+  -webkit-backdrop-filter:blur(10px) saturate(180%);
+  backdrop-filter:blur(10px) saturate(180%);
+}
+#use .vc-panel { border-radius:18px; }

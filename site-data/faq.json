@@ -1,0 +1,34 @@
+[
+  {
+    "q": "Bot 为什么不回回复？",
+    "a": "通常 15 秒内会回复，若发送图片可能稍慢。若超过 2 分钟未回复：<ul><li>可能是模型生成了空白内容，请重发消息</li><li>可能是 Bot 卡住，请等待几分钟后重试</li><li>极小概率被腾讯风控，请联系管理员</li><li>极小概率因为回复频率过快被限流，等一会或者联系管理员</li></ul>"
+  },
+  {
+    "q": "私聊突然出现「我们已成功添加为好友」？",
+    "a": "别担心！<strong>不是被删好友！</strong><br>这是因为之前是单向好友关系，刚刚才正式通过好友申请。请无视即可～"
+  },
+  {
+    "q": "Bot 的平台、模型是什么？",
+    "a": "平台：SnowLuma + <a href=\"https://github.com/CarefreeSongs712/mohobot\" target=\"_blank\" rel=\"noreferrer\">Mohobot</a><br>主模型：DeepSeek V4 Flash<br>Bot 基于自研的 <a href=\"https://github.com/CarefreeSongs712/mohobot\" target=\"_blank\" rel=\"noreferrer\">Mohobot</a> 多机器人 AI 框架驱动。"
+  },
+  {
+    "q": "可以把 Bot 分享给别人或拉入其他群吗？",
+    "a": "✅ <strong>可以分享推荐</strong>（建议 Q群/QQ空间，不建议B站等公开平台）<br><br>✅ <strong>拉群需联系管理员</strong>，具体要求请查看「群规与使用规范」中的拉群规则。"
+  },
+  {
+    "q": "我也想配置自己的 Bot，能帮忙吗？",
+    "a": "当然可以！请联系管理员获取人设提示词和相关配置。<br>未来功能完善后，有计划开源，欢迎一起交流！<br>提示词开源地址： <a href=\"https://github.com/CarefreeSongs712/vc-character-prompt\" target=\"_blank\" rel=\"noreferrer\">vc-character-prompt</a>"
+  },
+  {
+    "q": "bot记忆能持续多久？",
+    "a": "私聊记忆完整保留30轮，30轮以上压缩，可能会有丢失。天依beta上线记忆图谱，重要的事和关系可以长期存。群聊会话记忆长时间易清理。"
+  },
+  {
+    "q": "私聊和群聊区别？",
+    "a": "基本一样，私聊记忆较全。优先使用私聊而非群聊"
+  },
+  {
+    "q": "用 bot 需要花钱吗？",
+    "a": "不需要。bot 使用功能均为免费。赞助皆为自愿，不强制赞助。赞助名单可以在最下面找到。"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2026.08.10",
+    "title": "🎉 全 Bot 迁移至 Mohobot 新平台",
+    "body": "除言和 bot 外，所有 bot 已迁移至 Mohobot 新平台。mohobot 框架是 @墨染荷韵 开发的多 bot 框架，一个进程同时接入多个 Bot，内置 Agent 流水线（话题规划 → 结构化回复 → 反思记忆）、插件系统、上下文 AI 总结压缩等。",
+    "link": { "label": "Mohobot", "href": "https://github.com/CarefreeSongs712/mohobot" },
+    "listTitle": "与原先相比，体验改进：",
+    "list": [
+      "更好的上下文管理：会话窗口 AI 总结，群聊上下文感知",
+      "AgentLuo 模式的对谈提升，bot 会对谈生成用户画像，进一步增进感情",
+      "长期记忆维持"
+    ],
+    "note": "* AgentLuo 模式目前只在天依 beta 中开放"
+  }
+]

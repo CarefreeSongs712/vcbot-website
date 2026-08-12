@@ -5,8 +5,8 @@
   --glass:rgba(255,255,255,0.6); --glass-strong:rgba(255,255,255,0.72); --glass-bd:rgba(102,204,255,0.5);
   --shadow:0 10px 40px rgba(43,159,224,0.18);
   --mono:"Chakra Petch","JetBrains Mono",monospace;
-  --display:"ZCOOL KuaiLe","Noto Serif SC",cursive;
-  --sans:"LXGW WenKai Screen","Noto Sans SC","PingFang SC",system-ui,sans-serif;
+  --display:"ZCOOL KuaiLe","LXGW WenKai SC","Noto Serif SC",cursive;
+  --sans:"LXGW WenKai SC","ZCOOL KuaiLe","Noto Sans SC","PingFang SC",system-ui,sans-serif;
   --radius:20px; --ease:cubic-bezier(.175,.885,.32,1.1);
 }
 * { margin:0; padding:0; box-sizing:border-box; }

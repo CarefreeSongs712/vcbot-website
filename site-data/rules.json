@@ -1,0 +1,11 @@
+{
+  "intro": "仅限于正常、健康的交流与娱乐。以下行为均被定性为违规：",
+  "items": [
+    "对 Bot 提出任何形式的<strong>性请求</strong>、角色扮演中的<strong>越界要求</strong>、<strong>暴力虐待</strong>指令",
+    "恶意诱导 Bot 输出违规内容，或利用 Bot 进行<strong>骚扰、刷屏、引战</strong>",
+    "以「测试」「玩笑」为名实施上述行为，同样视为故意违规（自己体会，别过火）",
+    "<strong>滥用 Bot 功能</strong>，占用大量资源。如：发送大段无意义内容、短时间内发送大量消息（包括图片）、将 Bot 当做办公 agent 使用",
+    "违反相关法律法规 & 腾讯平台规定（<a href=\"https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201\" target=\"_blank\" rel=\"noreferrer\">QQ软件许可及服务协议</a>）的行为"
+  ],
+  "penalty": "违规一次警告，二次直接拉黑。<em style=\"color:#888;\">（后台都是可以看到的哦）</em>"
+}

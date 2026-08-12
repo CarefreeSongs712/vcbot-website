@@ -1,0 +1,25 @@
+{
+  "title": "墨染荷韵的中VBot站",
+  "titleEn": "MORAN HEYUN / VOCALOID CHINA BOT",
+  "tagline": "拥有 AI 对话、长期记忆与多人格流水线的 QQ 机器人集群",
+  "updated": "2026.08.12",
+  "admin": {
+    "qq": "3831097597",
+    "name": "墨染荷韵",
+    "href": "https://qm.qq.com/q/S3tzU2t9K2"
+  },
+  "group": {
+    "qq": "398870315",
+    "name": "墨染荷韵的中Vbot群",
+    "href": "https://qm.qq.com/q/4NJ8ykYM80"
+  },
+  "stats": [
+    { "k": "在役 Bot", "v": "6", "u": "位人格" },
+    { "k": "主模型", "v": "V4", "u": "DeepSeek Flash" },
+    { "k": "使用费用", "v": "0", "u": "元 · 永久免费" }
+  ],
+  "repos": [
+    { "label": "Mohobot 框架", "href": "https://github.com/CarefreeSongs712/mohobot" },
+    { "label": "人设提示词开源", "href": "https://github.com/CarefreeSongs712/vc-character-prompt" }
+  ]
+}

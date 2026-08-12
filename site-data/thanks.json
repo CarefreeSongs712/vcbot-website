@@ -1,0 +1,23 @@
+{
+  "warning": "⚠️ 重要声明：Bot 所有功能<strong>完全免费</strong>，赞助纯属自愿。任何要求付费使用改 Bot 的行为均为诈骗，请勿轻信！如遇此类情况，请反馈给管理员（见最上方）处理。",
+  "perks": [
+    "赞助满 0.01 元 可自定义群内头衔",
+    "赞助满 0.01 元 可被列到赞助者名单内"
+  ],
+  "qr": "https://cdn.luogu.com.cn/upload/image_hosting/vnb11bdw.png",
+  "developers": [
+    "@Arch（1658796850）",
+    "@Azured（3978983131）",
+    "@暻.（2679436488）",
+    "@绫（858120206）",
+    "@薛爆卧炸荒（2609245960）",
+    "@若有词（2011372693）",
+    "@咯天依（1489388902）"
+  ],
+  "projects": [
+    { "label": "AstrBot", "href": "https://github.com/AstrBotDevs/AstrBot" },
+    { "label": "Agent-LuoTianyi", "href": "https://github.com/CarefreeSongs712/Agent-LuoTianyi" },
+    { "label": "NapCatQQ", "href": "https://github.com/NapNeko/NapCatQQ" },
+    { "label": "SnowLuma", "href": "https://github.com/SnowLuma/SnowLuma" }
+  ]
+}

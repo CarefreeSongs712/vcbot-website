@@ -1,0 +1,29 @@
+{
+  "banner": "基于 DeepSeek V4 Flash，私聊全部开放，群聊仅 @ 或引用时回复。",
+  "bannerTitle": "AI 大模型对话",
+  "commands": [
+    { "icon": "activity", "label": "查看系统状态", "cmd": ["/status"] },
+    { "icon": "thumbs", "label": "个人名片点赞", "cmd": ["/赞我"] },
+    { "icon": "heart", "label": "抽老婆功能", "cmd": ["/今日老婆", "/关系图", "/强娶 @墨染荷韵", "/求婚 @墨染荷韵"] },
+    { "icon": "music", "label": "网易云点歌", "cmd": ["/点歌 告死鸟"] },
+    { "icon": "help", "label": "更多指令", "cmd": ["/help"] }
+  ],
+  "advanced": {
+    "title": "会话管理（进阶玩法）",
+    "intro": "会话是什么？简单说，就是<strong>隔离 bot 的记忆</strong>。可以类比为豆包 app 的多会话功能，不同会话之间的上下文是隔绝的，bot 对你的印象也是不同的。",
+    "mainCmd": "<strong>总指令：<code class=\"vc-code\">/sess</code></strong>",
+    "mainList": [
+      "<code class=\"vc-code\">/sess list</code> 查看所有会话列表",
+      "<code class=\"vc-code\">/sess new &lt;name&gt;</code> 创建新会话",
+      "<code class=\"vc-code\">/sess switch &lt;id&gt;</code> 切换会话",
+      "<code class=\"vc-code\">/sess del &lt;id&gt;</code> 删除会话"
+    ],
+    "subTitle": "会话内指令：",
+    "subList": [
+      "<code class=\"vc-code\">/hist</code> 显示当前会话上下文（调试功能）",
+      "<code class=\"vc-code\">/forget &lt;N&gt;</code> 忘记录最近 N 轮对话",
+      "<code class=\"vc-code\">/clear</code> 清空当前会话"
+    ],
+    "outro": "如果你没看懂也没事，因为这些功能你不用也没有问题，仅作为<strong>进阶玩法</strong>。"
+  }
+}

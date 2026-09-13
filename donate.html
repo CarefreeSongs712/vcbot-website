@@ -185,7 +185,7 @@
             `;
 
             monthArr.forEach(k => {
-                const data = monthMap[k];
+                const data = monthMap[k] || { income: 0, count: 0 };
                 const parts = k.split('-');
                 const displayMonth = parts[0] + '年' + parseInt(parts[1]) + '月';
                 html += `

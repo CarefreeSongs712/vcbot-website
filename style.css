@@ -1,7 +1,7 @@
 /* vc-bot AERO rebuild */
 :root {
-  --cyan:#66CCFF; --cyan-deep:#2b9fe0; --cyan-ink:#0a3d5c;
-  --muted:#5d7689; --line:rgba(43,159,224,0.25);
+  --cyan:#66CCFF; --cyan-deep:#2b9fe0; --cyan-ink:#082c44;
+  --muted:#3a556c; --line:rgba(43,159,224,0.25);
   --glass:rgba(255,255,255,0.6); --glass-strong:rgba(255,255,255,0.72); --glass-bd:rgba(102,204,255,0.5);
   --shadow:0 10px 40px rgba(43,159,224,0.18);
   --mono:"Chakra Petch","JetBrains Mono",monospace;

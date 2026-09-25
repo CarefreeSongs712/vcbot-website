@@ -10,6 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@300;400;500&family=Chakra+Petch:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css">
+    <style>
+.ban-table-wrap { overflow-x:auto; margin-top:2px; border-radius:12px; }
+.ban-table { width:100%; min-width:420px; border-collapse:collapse; font-size:14px; background:var(--glass); border:1px solid var(--glass-bd); border-radius:12px; overflow:hidden; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
+.ban-table th { font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--muted); text-align:left; padding:12px 14px; border-bottom:1px solid var(--glass-bd); background:rgba(255,255,255,.45); white-space:nowrap; }
+.ban-table td { padding:11px 14px; border-bottom:1px solid rgba(102,204,255,.16); font-family:var(--mono); font-size:13.5px; color:var(--cyan-ink); white-space:nowrap; }
+.ban-table tbody tr:last-child td { border-bottom:none; }
+</style>
 </head>
 <body><div class="vc-top" id="vcTop"><div class="logo" id="vcLogo" style="cursor:pointer">墨染<b>荷韵</b> · 中VBot站</div><nav><a href="#fn">功能</a><a href="#use">使用</a><a href="#qa">Q&A</a><a href="#rule">群规</a><a href="#team">团队</a><a href="#fund">赞助</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
     <div class="vc-bg">
@@ -61,6 +68,15 @@
             <div class="vc-sechead vc-up"><span class="vc-secnum">📢</span><h2 class="vc-sectitle">最新公告</h2><span class="vc-seclatin">NOTICE</span></div>
             <div class="vc-panel accent vc-up" style="margin-top:0;">
                 <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">2026-09-25</div>
+                <h3 style="font-family:var(--display);font-size:20px;margin:8px 0 10px;font-weight:700;">9.25 更新</h3>
+                <ul style="color:var(--muted);margin:0;padding-left:20px;">
+                    <li>歌曲知识库新增 <strong style="color:var(--cyan-ink);">106</strong> 首新歌</li>
+                    <li>修复了用户自动回复导致 bot 频繁回复的问题</li>
+                    <li>处罚了三个违规对话（详见下方「<a href="#ban" style="color:var(--cyan-deep);">封神榜</a>」）</li>
+                </ul>
+            </div>
+            <div class="vc-panel accent vc-up" style="margin-top:16px;">
+                <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">2026-09-22</div>
                 <h3 style="font-family:var(--display);font-size:20px;margin:8px 0 10px;font-weight:700;">洛天依 bot-2 封号，现已启用 bot-5</h3>
                 <p style="color:var(--muted);margin:0;">洛天依 bot-2 已被封号，现已启用 <strong style="color:var(--cyan-ink);">bot-5</strong>（记忆全新）。bot-2 的记忆不会删除，只是暂时无法使用，恢复后会另行通知。</p>
             </div>
@@ -164,7 +180,7 @@
                         <ul>
                             <li><strong>禁止</strong>血腥暴力、猎奇以及引起多数成员反感的内容，管理将撤回并根据情况移出群</li>
                             <li><strong>严禁</strong>网暴、开盒（人肉搜索）他人等违法行为</li>
-                            <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！违者直接移出群</li>
+                            <li><strong>绝对不允许</strong>键政（政治讨论）、敏感话题发言！不管你的观点是不是正确的，只要涉政都不允许，若发现立即严肃处理，违者直接移出群</li>
                             <li><strong>禁止</strong>未经管理员许可发布广告、拉人进其它群、推广或发送不明链接，违者撤回并视情况移出群</li>
                             <li>对骂、互嘲一律有惩罚，先挑事者惩罚加倍。中间煽风点火者也会受到相应处罚。群员可截图举给群管，私人问题请私聊解决</li>
                         </ul>
@@ -189,8 +205,33 @@
             </div>
         </section>
 
+        <section class="vc-sec" id="ban">
+            <div class="vc-sechead vc-up"><span class="vc-secnum">05</span><h2 class="vc-sectitle">封神榜</h2><span class="vc-seclatin">PUNISHMENT</span></div>
+            <p class="vc-up" style="color:var(--muted);font-size:13.5px;margin-top:0;">若有异议，请私聊管理员 墨染荷韵（QQ：3831097597）处理。</p>
+            <div class="vc-up">
+                <div class="vc-acc">
+                    <div class="vc-acc-h"><span class="vc-acc-i">📋</span><span>封禁记录（点击展开）</span><span class="vc-acc-x">+</span></div>
+                    <div class="vc-acc-b"><div class="vc-acc-in">
+                        <div class="ban-table-wrap">
+                            <table class="ban-table">
+                                <thead><tr><th>封禁用户</th><th>封禁时长</th><th>封禁理由</th><th>处罚时间</th></tr></thead>
+                                <tbody>
+                                    <tr><td>147****023</td><td>48 小时</td><td>违规对话</td><td>9.25 13:45</td></tr>
+                                    <tr><td>211****615</td><td>48 小时</td><td>违规对话</td><td>9.25 13:45</td></tr>
+                                    <tr><td>304****334</td><td>48 小时</td><td>违规对话</td><td>9.25 13:45</td></tr>
+                                    <tr><td>134****155</td><td>48 小时</td><td>涉政敏感</td><td>9.1 22:00</td></tr>
+                                    <tr><td>134****155</td><td>48 小时</td><td>涉政敏感</td><td>8.29 10:30</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="color:var(--muted);font-size:13px;margin:12px 0 0;">注：封禁是指限制使用 bot 服务。</p>
+                    </div></div>
+                </div>
+            </div>
+        </section>
+
         <section class="vc-sec" id="note">
-            <div class="vc-sechead vc-up"><span class="vc-secnum">05</span><h2 class="vc-sectitle">其它事项</h2><span class="vc-seclatin">NOTICE</span></div>
+            <div class="vc-sechead vc-up"><span class="vc-secnum">06</span><h2 class="vc-sectitle">其它事项</h2><span class="vc-seclatin">NOTICE</span></div>
             <div class="vc-panel vc-up" style="margin-bottom:16px;">
                 <h3 style="font-family:var(--display);font-size:19px;margin:0 0 10px;font-weight:700;">💬 消息发送注意事项</h3>
                 <p style="color:var(--muted);margin:0;">Bot 会逐个处理消息。请一段一段发，<strong>不要一个分句发一条消息</strong>（逐条短消息会导致 Bot 逐条回复、上下文混乱）。<br><strong>也不要一次发送多张图片。</strong>语音消息和部分表情包可能无法识别，请尽量使用文字。</p>
@@ -202,7 +243,7 @@
             <div class="vc-note vc-danger vc-up">📍 违规处理提醒：详细的 Bot 使用规范与群内规则已在「群规与使用规范」中完整列出，请务必阅读并遵守。违规一次警告，二次直接拉黑。管理组拥有最终解释与处置权。</div>
         </section>
         <section class="vc-sec" id="legal">
-            <div class="vc-sechead vc-up"><span class="vc-secnum">06</span><h2 class="vc-sectitle">免责声明</h2><span class="vc-seclatin">DISCLAIMER</span></div>
+            <div class="vc-sechead vc-up"><span class="vc-secnum">07</span><h2 class="vc-sectitle">免责声明</h2><span class="vc-seclatin">DISCLAIMER</span></div>
             <div class="vc-panel vc-legal vc-danger vc-up">
                 <p style="color:#c0392b;font-weight:700;margin:0;">请认真阅读本免责声明。您一旦开始使用天依等 Bot，即视为您已充分阅读、理解并同意本声明的全部内容。</p>
                 <div style="margin-top:14px;">
@@ -231,7 +272,7 @@
         </section>
 
         <section class="vc-sec" id="team">
-            <div class="vc-sechead vc-up"><span class="vc-secnum">07</span><h2 class="vc-sectitle">开发团队</h2><span class="vc-seclatin">THE TEAM</span></div>
+            <div class="vc-sechead vc-up"><span class="vc-secnum">08</span><h2 class="vc-sectitle">开发团队</h2><span class="vc-seclatin">THE TEAM</span></div>
             <p class="vc-up" style="color:var(--muted);font-size:13.5px;">人设提示词已在<a href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank" rel="noreferrer" style="color:var(--cyan-deep);font-weight:700;">这里</a>开源，其它部分完善后也会继续开源</p>
             <div class="vc-team vc-up">
                 <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-1.jpg" alt="墨染荷韵" loading="lazy"></div><div class="vc-tc-n">墨染荷韵</div><div class="vc-tc-r">代码/管理</div><div class="vc-tc-q">3831097597</div></div>
@@ -240,11 +281,12 @@
                 <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-4.jpg" alt="若有词" loading="lazy"></div><div class="vc-tc-n">若有词</div><div class="vc-tc-r">人设/管理</div><div class="vc-tc-q">2011372693</div></div>
                 <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-5.jpg" alt="瞿子尧" loading="lazy"></div><div class="vc-tc-n">瞿子尧</div><div class="vc-tc-r">QQ/管理</div><div class="vc-tc-q">1341586492</div></div>
                 <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-6.png" alt="thepiationesl" loading="lazy"></div><div class="vc-tc-n">thepiationesl</div><div class="vc-tc-r">社区开发</div><div class="vc-tc-q">2145824082</div></div>
+                <div class="vc-tc"><div class="vc-tc-av"><img src="avatars/avatar-7.jpg" alt="lingyu" loading="lazy"></div><div class="vc-tc-n">lingyu</div><div class="vc-tc-r">QQ/管理</div><div class="vc-tc-q">1457936</div></div>
             </div>
             <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:14px;">⭐ 排名不分先后</p>
         </section>
         <section class="vc-sec" id="fund">
-            <div class="vc-sechead vc-up"><span class="vc-secnum">08</span><h2 class="vc-sectitle">感谢赞助</h2><span class="vc-seclatin">SUPPORT</span></div>
+            <div class="vc-sechead vc-up"><span class="vc-secnum">09</span><h2 class="vc-sectitle">感谢赞助</h2><span class="vc-seclatin">SUPPORT</span></div>
             <div class="vc-note vc-danger vc-up" style="margin-top:0;">⚠️ 重要声明：Bot 所有功能<strong>完全免费</strong>，赞助纯属自愿。任何要求付费使用该 Bot 的行为均为诈骗，请勿轻信！如遇此类情况，请反馈给管理员（见最上方）处理。</div>
             <div class="vc-note vc-ok vc-up">
                 <ul style="margin:0;padding-left:18px;">

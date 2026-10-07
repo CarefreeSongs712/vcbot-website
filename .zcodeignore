@@ -1,0 +1,54 @@
+# ===== crawler / scratch artifacts (not part of the site) =====
+site-data/img/__pycache__/
+site-data/img/*.pyc
+site-data/img/*.py
+site-data/img/*.log
+site-data/img/bad_urls.txt
+site-data/img/cands.json
+site-data/img/moe.json
+site-data/img/ocr_report.json
+site-data/img/ocr_report_v2.json
+site-data/img/ocr_report_v3.json
+site-data/img/pool_bili_manifest.json
+site-data/img/pool_bili_raw_manifest.json
+site-data/img/pool/
+site-data/img/probe_chars/
+site-data/img/raw/
+site-data/img/review.log
+site-data/img/review_full.log
+
+# ===== misc =====
+.DS_Store
+*.swp
+
+# ===== ↑ 以上同步自 .gitignore（「从 .gitignore 同步」只重写以上部分）=====
+.git/
+.hg/
+.svn/
+node_modules/
+bower_components/
+jspm_packages/
+__pycache__/
+site-packages/
+venv/
+coverage/
+htmlcov/
+lcov-report/
+cmakefiles/
+cmake-build-*/
+bazel-*/
+pods/
+deriveddata/
+storybook-static/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+cdk.out/
+*.egg-info/
+*.dist-info/
+eggs/
+pip-wheel-metadata/
+wheels/
+# ----- ↑ 以上为 ZCode 默认排除规则（自定义规则请写在本行下方，不会被同步/恢复改动）-----
+# 自定义规则写在下方（本行提示可删除）

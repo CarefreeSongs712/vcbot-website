@@ -5,20 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>公告 - 墨染荷韵的中VBot站</title>
 <link rel="icon" href="favicon.ico?v=1" type="image/x-icon">
-<link rel="stylesheet" href="style.css">
-<link rel='preconnect' href='https://fonts.googleapis.com'>
-<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@300;400;500&family=Chakra+Petch:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css">
+<link rel="stylesheet" href="style.css?v=20261027">
 <style>
-.vc-sec{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-bd);border-radius:var(--radius);padding:22px 24px;margin-bottom:24px;box-shadow:var(--shadow);}
+.vc-sec{background:var(--glass);border:1px solid var(--glass-bd);border-radius:var(--radius);padding:22px 24px;margin-bottom:24px;box-shadow:var(--shadow);}
 .vc-fly,.vc-flyr,.vc-zoom,.vc-up,.vc-up.d1,.vc-up.d2,.vc-up.d3,.vc-up.d4{opacity:1 !important;transform:none !important;transition:none !important;}
 </style>
 </head>
 <body>
-<div class="vc-bg"><div class="vc-aurora vc-a1"></div><div class="vc-aurora vc-a2"></div><div class="vc-aurora vc-a3"></div><div class="vc-grid"></div></div>
-<div class="vc-bgimg"></div>
-<div class="vc-top" id="vcTop"><div class="logo" id="vcLogo">墨染<b>荷韵</b> · 中VBot站</div><nav><a href="index.html">← 返回主页</a></nav><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
+<div class="vc-top" id="vcTop"><div class="logo" id="vcLogo">墨染<b>荷韵</b> · 中VBot站</div><nav><a href="index.html">← 返回主页</a></nav><button class="theme-btn" id="themeBtn" title="切换深浅主题"><span id="themeIcon">🌙</span></button><a class="tb-btn" href="donate.html">赞助名单 ↗</a></div>
 <main class="vc-wrap">
 <header class="vc-hero-banner">
 <div class="vc-kicker"><span>ANNOUNCEMENT</span><span>UPD 2026年10月24日</span></div>
@@ -115,9 +109,19 @@
 </footer>
 </main>
 <script>
+document.querySelectorAll('.vc-acc-h').forEach(function(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});});
 var top=document.getElementById('vcTop');
 window.addEventListener('scroll',function(){if(top)top.classList.toggle('shrink', window.scrollY>40);});
-document.getElementById('vcLogo').addEventListener('click',function(){location.href='index.html';});
+document.getElementById('vcLogo').addEventListener('click',function(){window.scrollTo({top:0});});
+</script>
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('themeBtn'),icon=document.getElementById('themeIcon');
+function set(d){root.classList.toggle('dark',d);if(icon)icon.textContent=d?'\u2600\ufe0f':'\ud83c\udf19';try{localStorage.setItem('vc-theme',d?'dark':'light');}catch(e){}}
+var saved=null;try{saved=localStorage.getItem('vc-theme');}catch(e){}
+set(saved==='dark');
+if(btn)btn.addEventListener('click',function(){set(!root.classList.contains('dark'));});
+})();
 </script>
 </body>
 </html>

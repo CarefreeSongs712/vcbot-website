@@ -19,7 +19,7 @@
     <div class="vc-wrap">
         <header class="vc-up prx">
             <div class="vc-hero-banner">
-                <div class="vc-kicker"><span>MOHOBOT RUNTIME</span><span>UPD 2026年10月27日</span></div>
+                <div class="vc-kicker"><span>MOHOBOT RUNTIME</span><span>UPD 2026年10月29日</span></div>
                 <h1 class="vc-title vc-zoom">墨染荷韵的中VBot站</h1>
                 <p class="vc-sub vc-fly d1">拥有 AI 对话等诸多功能的 QQ 机器人，由 vSinger 等角色驱动——洛天依、言和、乐正绫、星尘、墨清弦、诗岸、心华、初音未来，与你同行的虚拟歌姬们。</p>
                 <div class="vc-chips vc-fly d2">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="vc-stats vc-fly d3">
                     <div class="vc-stat"><div class="vc-stat-k">RUNTIME</div><div class="vc-stat-v">Mohobot</div><div class="vc-stat-u">多bot框架</div></div>
-                    <div class="vc-stat"><div class="vc-stat-k">MODEL</div><div class="vc-stat-v">GLM 5.3</div><div class="vc-stat-u">Flash</div></div>
+                    <div class="vc-stat"><div class="vc-stat-k">MODEL</div><div class="vc-stat-v">DeepSeek V4.1</div><div class="vc-stat-u">Flash</div></div>
                     <div class="vc-stat"><div class="vc-stat-k">PRICE</div><div class="vc-stat-v">免费</div><div class="vc-stat-u">永久</div></div>
                 </div>
                 <div class="vc-marquee vc-fly d4"><div class="vc-marquee-track">
@@ -55,12 +55,11 @@
         <section class="vc-sec" id="notice">
             <div class="vc-sechead vc-up"><span class="vc-secnum">📢</span><h2 class="vc-sectitle">最新公告</h2><span class="vc-seclatin">NOTICE</span></div>
             <div class="vc-panel accent vc-up" style="margin-top:0;">
-                <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">2026-10-24</div>
-                <h3 style="font-family:var(--display);font-size:20px;margin:8px 0 10px;font-weight:700;">mohobot 系统更新</h3>
+                <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">2026-10-29</div>
+                <h3 style="font-family:var(--display);font-size:20px;margin:8px 0 10px;font-weight:700;">服务器扩容，卡顿已缓解</h3>
                 <ul style="color:var(--muted);margin:0;padding-left:20px;">
-                    <li>歌曲知识库升级：接入更多歌曲来源并优化模糊搜索，点歌更准</li>
-                    <li>对话质量优化：减少复读与机械化表达，回复更加自然</li>
-                    <li>多项稳定性修复：提升服务运行稳定性</li>
+                    <li>新增一台服务器分担负载，近几天的卡顿情况已明显缓解</li>
+                    <li>高峰期回复更加稳定，长时间无响应的情况大幅减少</li>
                 </ul>
             </div>
             <div style="text-align:center;margin-top:16px;" class="vc-up">
@@ -72,7 +71,7 @@
             <div class="vc-panel accent vc-up">
                 <div style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--cyan);">CORE</div>
                 <h3 style="font-family:var(--display);font-size:24px;margin:8px 0 10px;font-weight:700;">AI 大模型对话</h3>
-                <p style="color:var(--muted);margin:0;">基于 GLM 5.3 Flash，私聊全部开放，群聊仅 @ 或引用时回复。</p>
+                <p style="color:var(--muted);margin:0;">基于 DeepSeek V4.1 Flash，私聊全部开放，群聊仅 @ 或引用时回复。</p>
             </div>
             <div class="vc-cmds vc-up">
                 <div class="vc-cmd"><div class="vc-cmd-l">查看系统状态</div><code class="vc-code">/status</code></div>
@@ -130,7 +129,7 @@
             <div class="vc-up">
                 <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q1</span><span>Bot 为什么不回复？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>通常 15 秒内会回复，若发送图片可能稍慢。若超过 2 分钟未回复：</p><ul><li>可能是模型生成了空白内容，请重发消息</li><li>可能是 Bot 卡住，请等待几分钟后重试</li><li>极小概率被腾讯风控，请联系管理员</li><li>极小概率因为回复频率过快被限流，等一会或者联系管理员</li></ul></div></div></div>
                 <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q2</span><span>私聊突然出现「我们已成功添加为好友」？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>别担心！<strong>不是被删好友！</strong><br>这是因为 Bot 被风控，表面上加上了好友而实际没有，之前是单向好友关系，刚刚才正式通过好友申请。请无视即可～</p></div></div></div>
-                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q3</span><span>Bot 的平台、模型是什么？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>平台：SnowLuma + <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a><br>主模型：GLM 5.3 Flash<br>Bot 基于自研的 <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a> 多机器人 AI 框架驱动。</p></div></div></div>
+                <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q3</span><span>Bot 的平台、模型是什么？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>平台：SnowLuma + <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a><br>主模型：DeepSeek V4.1 Flash<br>Bot 基于自研的 <a href="https://github.com/CarefreeSongs712/mohobot" target="_blank" rel="noreferrer">Mohobot</a> 多机器人 AI 框架驱动。</p></div></div></div>
                 <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q4</span><span>可以把 Bot 分享给别人或拉入其他群吗？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>✅ <strong>可以分享推荐</strong>（建议 Q群/QQ空间，不建议B站等公开平台）<br>✅ <strong>拉群需联系管理员</strong>，具体要求请查看「群规与使用规范」中的拉群规则。</p></div></div></div>
                 <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q5</span><span>我也想配置自己的 Bot，能帮忙吗？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>当然可以！人设提示词已开源，可直接前往 <a href="https://github.com/CarefreeSongs712/vc-character-prompt" target="_blank" rel="noreferrer">vc-character-prompt</a> 获取；其它配置相关问题请联系管理员交流。<br>未来功能完善后，其余部分也会继续开源，欢迎一起交流！</p></div></div></div>
                 <div class="vc-acc"><div class="vc-acc-h"><span class="vc-acc-i">Q6</span><span>bot记忆能持续多久？</span><span class="vc-acc-x">+</span></div><div class="vc-acc-b"><div class="vc-acc-in"><p>记忆完整保留40轮，40轮以上压缩，可能会有丢失。另外长期记忆功能正在不断完善，敬请期待！</p></div></div></div>
@@ -254,7 +253,7 @@
                     <p>违规行为的认定与处罚按本站「群规与使用规范」执行（违规一次警告，二次直接拉黑），管理组拥有对违规行为的<strong>最终解释与处置权</strong>。</p>
                     <h4>四、隐私与数据</h4>
                     <p>我们会尊重并保护您的个人隐私，所有聊天记录均不会在未经您授权的情况下公开，但这不代表我们不会检查聊天记录，管理组保留全天实时聊天日志用于违规审查。日志将长期保留、不做定期清理；如您希望删除自己的聊天数据，可联系管理员申请处理。</p>
-                    <p>为生成回复，<strong>您发送的消息内容将被传输至第三方 AI 服务商（如智谱，GLM 系列模型）进行处理</strong>，该等处理受相应服务商隐私政策约束。请勿在对话中输入身份证号、住址、账号密码、银行卡号等敏感个人信息；如自行输入，相关风险由您自行承担。</p>
+                    <p>为生成回复，<strong>您发送的消息内容将被传输至第三方 AI 服务商（如深度求索，DeepSeek 系列模型）进行处理</strong>，该等处理受相应服务商隐私政策约束。请勿在对话中输入身份证号、住址、账号密码、银行卡号等敏感个人信息；如自行输入，相关风险由您自行承担。</p>
                     <h4>五、服务可用性</h4>
                     <p>本服务按「现状」提供，开发者不对服务的持续可用性作出保证。因腾讯平台风控、服务器故障、模型服务商变更或不可抗力等原因导致的服务中断、延迟或数据丢失，开发者不承担责任，但会尽力恢复服务。开发者保留暂停、限制或终止服务以及封禁个别用户使用的权利。</p>
                     <h4>六、未成年人特别保护条款</h4>
@@ -302,16 +301,16 @@
             <div class="vc-up" style="margin-top:40px;">
                 <div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--muted);">特别感谢以下开发者（不分先后）</div>
                 <div class="vc-chips" style="margin-top:10px;">
-                    <span class="vc-chip">@Arch（1658796850）</span>
-                    <span class="vc-chip">@Azured（3978983131）</span>
-                    <span class="vc-chip">@暻.（2679436488）</span>
-                    <span class="vc-chip">@绫（858120206）</span>
-                    <span class="vc-chip">@薛爆卧炸荒（2609245960）</span>
-                    <span class="vc-chip">@若有词（2011372693）</span>
-                    <span class="vc-chip">@咯天依（1489388902）</span>
-                    <span class="vc-chip">@瞿子尧（1341586492）</span>
-                    <span class="vc-chip">@lingyu（1457936）</span>
-                    <span class="vc-chip">@北沓（1803348132）</span>
+                    <span class="vc-chip">@Arch</span>
+                    <span class="vc-chip">@Azured</span>
+                    <span class="vc-chip">@暻.</span>
+                    <span class="vc-chip">@绫</span>
+                    <span class="vc-chip">@薛爆卧炸荒</span>
+                    <span class="vc-chip">@若有词</span>
+                    <span class="vc-chip">@咯天依</span>
+                    <span class="vc-chip">@瞿子尧</span>
+                    <span class="vc-chip">@lingyu</span>
+                    <span class="vc-chip">@北沓</span>
                 </div>
                 <div style="font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--muted);margin-top:26px;">感谢以下开源项目</div>
                 <div class="vc-chips" style="margin-top:10px;">
@@ -329,7 +328,7 @@
         </section>
 
         <footer class="vc-foot">
-            <p><span class="hl">墨染荷韵的中VBot站</span> &nbsp;/&nbsp; LAST UPDATE 2026年10月27日</p>
+            <p><span class="hl">墨染荷韵的中VBot站</span> &nbsp;/&nbsp; LAST UPDATE 2026年10月29日</p>
             <p>感谢各位的支持 ♥</p>
         </footer>
     </div>

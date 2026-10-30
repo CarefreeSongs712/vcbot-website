@@ -129,7 +129,7 @@
 			'2026-07': 349.89,
 			'2026-08': 196.43,
 		    '2026-09': 195.05,
-			'2026-10': 128.33
+			'2026-10': 195.29
 			}
         
             const container = document.getElementById('monthly-container');
@@ -204,7 +204,7 @@
                 </tbody>
             `;
             html += '</table>';
-            html += '<p style="text-align:right; font-size:13px; color:#999; margin-top:6px;">💡 支出数据不定期填写，这里只统计api支出，不包含服务器开销</p>';
+            html += '<p style="text-align:right; font-size:13px; color:#999; margin-top:6px;">💡 支出数据不定期填写，可能少于真实开支，但绝不会多计算</p>';
             html += '</div>';
 
             container.innerHTML = html;

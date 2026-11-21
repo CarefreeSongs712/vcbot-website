@@ -63,7 +63,7 @@ html.dark body::before { background:linear-gradient(rgba(102,204,255,.045) 1px,t
 .vc-chip:hover { background:var(--cyan); color:#fff; }
 .vc-idcards { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:22px; }
 .vc-idcard { background:var(--glass-strong); border:1px solid var(--glass-bd); border-radius:14px; padding:14px 16px; }
-.vc-idlabel { font-family:var(--mono); font-size:10px; letter-spacing:.2em; color:var(--label); }
+.vc-idlabel { font-size:10px; letter-spacing:.2em; color:var(--label); }
 .vc-idval { font-family:var(--mono); font-size:20px; font-weight:700; color:var(--cyan-ink); }
 .vc-idname { font-size:13px; color:var(--label); text-decoration:none; font-weight:600; }
 .vc-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:14px; margin-top:22px; }
